@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 世界杯比分预测 · 美加墨</title>
+<style>
+  :root {
+    --bg: #0a0e17;
+    --card: #111827;
+    --card-hover: #1a2332;
+    --border: #1e293b;
+    --accent: #f59e0b;
+    --accent2: #3b82f6;
+    --win: #10b981;
+    --lose: #ef4444;
+    --draw: #f59e0b;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --radius: 14px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+  .app { max-width: 780px; margin: 0 auto; padding: 24px 16px 48px; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 32px 0 24px;
+    position: relative;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .header .subtitle {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 6px;
+    letter-spacing: 1px;
+  }
+  .header .badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .badge.live {
+    border-color: #ef4444;
+    color: #ef4444;
+    animation: pulse-dot 1.5s infinite;
+  }
+  .badge.live::before {
+    content: '';
+    display: inline-block;
+    width: 7px; height: 7px;
+    background: #ef4444;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+  @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+  /* Date Switcher */
+  .date-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 8px 0 24px;
+    user-select: none;
+  }
+  .date-switcher button {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .date-switcher button:hover { background: var(--card-hover); border-color: var(--accent); }
+  .date-switcher .date-label {
+    font-size: 15px;
+    font-weight: 700;
+    min-width: 280px;
+    text-align: center;
+    color: var(--text);
+  }
+  .date-switcher .cal-toggle-btn {
+    width: auto;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 0 14px;
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid transparent;
+  }
+  .date-switcher .cal-toggle-btn:hover { border-color: var(--border); color: var(--text); }
+  .date-switcher .cal-toggle-btn.active { border-color: var(--accent); color: var(--accent); }
+
+  /* Calendar */
+  .mini-calendar {
+    display: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    user-select: none;
+  }
+  .mini-calendar.open { display: block; }
+  .mini-calendar .cal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    gap: 16px;
+  }
+  .mini-calendar .cal-header button {
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 2px 6px;
+  }
+  .mini-calendar .cal-header button:hover { color: var(--accent); }
+  .mini-calendar .cal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .mini-calendar .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+  }
+  .mini-calendar .cal-day {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: default;
+    position: relative;
+    transition: all 0.15s;
+  }
+  .mini-calendar .cal-day.has-match {
+    color: var(--text);
+    cursor: pointer;
+    background: rgba(245,158,11,0.06);
+    border: 1px solid rgba(245,158,11,0.2);
+  }
+  .mini-calendar .cal-day.has-match:hover {
+    background: rgba(245,158,11,0.15);
+    border-color: var(--accent);
+  }
+  .mini-calendar .cal-day.today {
+    border: 2px solid var(--accent2);
+    color: var(--accent2);
+    font-weight: 800;
+  }
+  .mini-calendar .cal-day.active-date {
+    background: rgba(245,158,11,0.2);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .mini-calendar .cal-day.empty { cursor: default; }
+  .mini-calendar .cal-day .dot {
+    width: 3px; height: 3px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-top: 1px;
+  }
+  .mini-calendar .cal-legend {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 10px;
+    font-size: 10px;
+    color: var(--muted);
+  }
+  .mini-calendar .cal-legend span { display: flex; align-items: center; gap: 4px; }
+  .mini-calendar .cal-legend .leg-dot {
+    width: 8px; height: 8px;
+    border-radius: 2px;
+    background: rgba(245,158,11,0.3);
+    border: 1px solid rgba(245,158,11,0.4);
+  }
+  .mini-calendar .cal-legend .leg-today {
+    width: 8px; height: 8px;
+    border-radius: 2px;
+    border: 2px solid var(--accent2);
+  }
+
+  /* Calendar Popover */
+  .cal-popover {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    background: #1a2332;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 14px 16px;
+    min-width: 240px;
+    max-width: 300px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    pointer-events: none;
+  }
+  .cal-popover.show { display: block; }
+  .cal-popover .pop-date {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .cal-popover .pop-match {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 12px;
+    color: var(--text);
+  }
+  .cal-popover .pop-match + .pop-match {
+    border-top: 1px solid rgba(255,255,255,0.03);
+  }
+  .cal-popover .pop-match .pop-flags {
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .cal-popover .pop-match .pop-teams {
+    flex: 1;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .cal-popover .pop-match .pop-score {
+    font-weight: 800;
+    font-size: 13px;
+    color: var(--accent2);
+    flex-shrink: 0;
+  }
+  .cal-popover .pop-match .pop-time {
+    font-size: 10px;
+    color: var(--muted);
+    flex-shrink: 0;
+    width: 40px;
+    text-align: right;
+  }
+  .cal-popover .pop-empty {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  /* Match Card */
+  .match-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 24px;
+    margin-bottom: 14px;
+    transition: all 0.25s;
+  }
+  .match-card:hover { border-color: #334155; background: var(--card-hover); }
+  .match-card.finished { opacity: 0.85; }
+
+  /* Card top bar: status + group + time */
+  .match-card .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .match-card .card-top .left-tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .match-card .card-top .right-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .match-card .card-top .right-info .stadium { opacity: 0.6; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .status-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 5px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+  .status-badge.live-badge {
+    background: rgba(239,68,68,0.12);
+    color: #ef4444;
+  }
+  .status-badge.done-badge {
+    background: rgba(16,185,129,0.1);
+    color: #10b981;
+  }
+  .status-badge.upcoming-badge {
+    background: rgba(59,130,246,0.1);
+    color: #60a5fa;
+  }
+  .group-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(245,158,11,0.1);
+    padding: 4px 10px;
+    border-radius: 5px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+
+  /* Teams row */
+  .match-card .teams-row {
+    display: grid;
+    grid-template-columns: 1fr 90px 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .match-card .team {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .match-card .team .flag {
+    font-size: 44px;
+    line-height: 1;
+  }
+  .match-card .team .name {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .match-card .team .name small {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .match-card .score-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .match-card .score {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--text);
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    padding: 6px 16px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .match-card .score.vs {
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0;
+    background: none;
+    padding: 0;
+  }
+  .match-card .score-label {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  /* Prediction row */
+  .match-card .prediction-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 4px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  .match-card .pred-tag {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+  .pred-tag.win { background: rgba(16,185,129,0.12); color: var(--win); }
+  .pred-tag.lose { background: rgba(239,68,68,0.1); color: var(--lose); }
+  .pred-tag.draw { background: rgba(245,158,11,0.1); color: var(--draw); }
+  .pred-tag.score-pred { background: rgba(59,130,246,0.12); color: var(--accent2); }
+  .pred-tag.confidence { background: rgba(148,163,184,0.08); color: var(--muted); font-weight: 400; }
+  .pred-tag.correct-tag { background: rgba(16,185,129,0.15); color: #34d399; }
+
+  /* Probability Bars */
+  .prob-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    margin-top: 10px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+  }
+  .prob-row .prob-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255,255,255,0.06);
+    flex-shrink: 0;
+  }
+  .prob-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+  }
+  .prob-item .prob-label { font-size: 10px; color: var(--muted); letter-spacing: 0.5px; }
+  .prob-item .prob-pct { font-size: 14px; font-weight: 800; }
+  .prob-item.home .prob-pct { color: var(--win); }
+  .prob-item.draw .prob-pct { color: var(--draw); }
+  .prob-item.away .prob-pct { color: var(--lose); }
+  .prob-bar-bg {
+    width: 100%;
+    height: 5px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .prob-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+  }
+  .prob-bar-fill.home-fill { background: linear-gradient(90deg, #10b981, #34d399); }
+  .prob-bar-fill.draw-fill { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .prob-bar-fill.away-fill { background: linear-gradient(90deg, #ef4444, #f87171); }
+
+  /* Key Factors */
+  .factors-row {
+    display: flex;
+    gap: 6px;
+    padding: 8px 16px 4px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .factors-row .factors-label {
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-right: 2px;
+  }
+  .factor-tag {
+    font-size: 10px;
+    color: var(--text);
+    background: rgba(148,163,184,0.08);
+    padding: 4px 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.05);
+    white-space: nowrap;
+  }
+
+  /* Model Consensus Panel */
+  .consensus {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+  .consensus h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent2);
+    margin: 0 0 14px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .consensus h3 .badge-sm {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 10px;
+    background: rgba(59,130,246,0.12);
+    color: var(--accent2);
+  }
+  .consensus-model-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+  }
+  .consensus-model {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.04);
+  }
+  .consensus-model .model-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .consensus-model .model-pts {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--accent);
+  }
+  .consensus-model .model-rank {
+    font-size: 10px;
+    color: var(--muted);
+    width: 18px;
+    text-align: center;
+  }
+  .consensus-legend {
+    display: flex;
+    gap: 14px;
+    margin-top: 12px;
+    font-size: 10px;
+    color: var(--muted);
+  }
+  .consensus-legend span strong { color: var(--text); }
+
+  /* Summary Panel */
+  .summary {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 22px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  .summary h3 {
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  .summary .stat-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .summary .stat {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .summary .stat strong {
+    color: var(--text);
+    margin-right: 4px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+    padding: 32px 0 16px;
+    opacity: 0.6;
+  }
+  .footer a { color: var(--accent2); text-decoration: none; }
+
+  /* Responsive */
+  @media (max-width: 520px) {
+    .date-switcher .date-label { min-width: 200px; font-size: 12px; }
+    .match-card { padding: 14px 14px; }
+    .match-card .card-top { gap: 6px; }
+    .match-card .card-top .right-info { font-size: 10px; }
+    .match-card .card-top .right-info .stadium { max-width: 120px; }
+    .match-card .teams-row { grid-template-columns: 1fr 60px 1fr; gap: 6px; }
+    .match-card .team .flag { font-size: 32px; }
+    .match-card .team .name { font-size: 13px; }
+    .match-card .score { font-size: 24px; padding: 4px 10px; letter-spacing: 2px; }
+    .match-card .prediction-row { gap: 6px; }
+    .match-card .pred-tag { font-size: 10px; padding: 4px 10px; }
+    .status-badge, .group-tag { font-size: 10px; padding: 3px 8px; }
+    .prob-row { gap: 6px; padding: 8px 12px; }
+    .prob-item .prob-pct { font-size: 12px; }
+    .prob-item .prob-label { font-size: 9px; }
+    .consensus-model-list { grid-template-columns: 1fr 1fr; gap: 6px; }
+    .consensus-model { padding: 8px 10px; }
+    .consensus-model .model-name { font-size: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>2026 FIFA World Cup</h1>
+    <div class="subtitle">MATCH PREDICTION · 美加墨</div>
+    <div class="badge-row">
+      <span class="badge">小组赛</span>
+      <span class="badge" id="groupBadge">I 组 · J 组</span>
+      <span class="badge live" id="liveBadge">1 场进行中</span>
+    </div>
+  </div>
+
+  <!-- Date Switcher -->
+  <div class="date-switcher">
+    <button onclick="prevDay()" title="前一天">&#8592;</button>
+    <span class="date-label" id="dateLabel">6月17日 星期三</span>
+    <button onclick="nextDay()" title="后一天">&#8594;</button>
+    <button onclick="goToday()" class="cal-toggle-btn" title="回到今天">今天</button>
+    <button onclick="toggleCalendar()" class="cal-toggle-btn" id="calToggle" title="日历视图">📅</button>
+  </div>
+
+  <!-- Mini Calendar -->
+  <div class="mini-calendar" id="miniCalendar">
+    <div class="cal-header">
+      <button onclick="calPrevMonth()">&#8592;</button>
+      <span id="calMonthLabel">2026年6月</span>
+      <button onclick="calNextMonth()">&#8594;</button>
+    </div>
+    <div class="cal-weekdays">
+      <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+    </div>
+    <div class="cal-grid" id="calGrid"></div>
+    <div class="cal-legend">
+      <span><span class="leg-dot"></span> 有比赛</span>
+      <span><span class="leg-today"></span> 今天</span>
+    </div>
+  </div>
+
+  <!-- Calendar Popover -->
+  <div class="cal-popover" id="calPopover"></div>
+
+  <!-- Summary -->
+  <div class="summary" id="summary">
+    <h3>今日预测概览</h3>
+    <div class="stat-row">
+      <span class="stat"><strong>比赛数:</strong> 4 场</span>
+      <span class="stat"><strong>已完成:</strong> 1 场</span>
+      <span class="stat"><strong>预测准确:</strong> 1/1 (100%)</span>
+      <span class="stat"><strong>场均进球预测:</strong> 2.8</span>
+    </div>
+  </div>
+
+  <!-- Model Consensus Panel -->
+  <div class="consensus" id="consensusPanel">
+    <h3>全球 LLM 预测共识 <span class="badge-sm">HF Leaderboard</span></h3>
+    <div class="consensus-model-list" id="consensusModels"></div>
+    <div class="consensus-legend">
+      <span>计分: <strong>精确比分 +10分</strong></span>
+      <span><strong>方向正确 +3分</strong></span>
+      <span>19/104 场已结算</span>
+    </div>
+  </div>
+
+  <!-- Match Cards -->
+  <div id="matchesContainer"></div>
+
+  <!-- Footer -->
+  <div class="footer">
+    数据仅供参考 · AI 预测基于历史战绩与阵容分析 · <a href="https://www.fifa.com" target="_blank">FIFA 官方赛程</a>
+  </div>
+
+</div>
+
+<script>
+// === Data Layer ===
+const matchData = {
+  '2026-06-12': {
+    date: '2026年6月12日 星期五',
+    stage: '小组赛第1轮',
+    matches: [
+      { id:1, time:'03:00', stadium:'墨西哥城阿兹特克体育场', group:'A组', home:{name:'墨西哥',flag:'🇲🇽',code:'MEX'}, away:{name:'南非',flag:'🇿🇦',code:'RSA'}, status:'done', realScore:'2 - 0', correct:null },
+      { id:2, time:'10:00', stadium:'瓜达拉哈拉体育场', group:'A组', home:{name:'韩国',flag:'🇰🇷',code:'KOR'}, away:{name:'捷克',flag:'🇨🇿',code:'CZE'}, status:'done', realScore:'2 - 1', correct:null }
+    ]
+  },
+  '2026-06-13': {
+    date: '2026年6月13日 星期六',
+    stage: '小组赛第1轮',
+    matches: [
+      { id:3, time:'03:00', stadium:'多伦多体育场', group:'B组', home:{name:'加拿大',flag:'🇨🇦',code:'CAN'}, away:{name:'波黑',flag:'🇧🇦',code:'BIH'}, status:'done', realScore:'1 - 1', correct:null },
+      { id:4, time:'09:00', stadium:'洛杉矶体育场', group:'D组', home:{name:'美国',flag:'🇺🇸',code:'USA'}, away:{name:'巴拉圭',flag:'🇵🇾',code:'PAR'}, status:'done', realScore:'4 - 1', correct:null }
+    ]
+  },
+  '2026-06-14': {
+    date: '2026年6月14日 星期日',
+    stage: '小组赛第1轮',
+    matches: [
+      { id:5, time:'03:00', stadium:'旧金山湾区体育场', group:'B组', home:{name:'卡塔尔',flag:'🇶🇦',code:'QAT'}, away:{name:'瑞士',flag:'🇨🇭',code:'SUI'}, status:'done', realScore:'1 - 1', correct:null },
+      { id:6, time:'06:00', stadium:'纽约大都会球场', group:'C组', home:{name:'巴西',flag:'🇧🇷',code:'BRA'}, away:{name:'摩洛哥',flag:'🇲🇦',code:'MAR'}, status:'done', realScore:'1 - 1', correct:null },
+      { id:7, time:'09:00', stadium:'波士顿吉列球场', group:'C组', home:{name:'海地',flag:'🇭🇹',code:'HAI'}, away:{name:'苏格兰',flag:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',code:'SCO'}, status:'done', realScore:'0 - 1', correct:null },
+      { id:8, time:'12:00', stadium:'温哥华体育场', group:'D组', home:{name:'澳大利亚',flag:'🇦🇺',code:'AUS'}, away:{name:'土耳其',flag:'🇹🇷',code:'TUR'}, status:'done', realScore:'2 - 0', correct:null }
+    ]
+  },
+  '2026-06-15': {
+    date: '2026年6月15日 星期一',
+    stage: '小组赛第1轮',
+    matches: [
+      { id:9, time:'01:00', stadium:'休斯顿体育场', group:'E组', home:{name:'德国',flag:'🇩🇪',code:'GER'}, away:{name:'库拉索',flag:'🇨🇼',code:'CUW'}, status:'done', realScore:'7 - 1', correct:null },
+      { id:10, time:'04:00', stadium:'达拉斯体育场', group:'F组', home:{name:'荷兰',flag:'🇳🇱',code:'NED'}, away:{name:'日本',flag:'🇯🇵',code:'JPN'}, status:'done', realScore:'2 - 2', correct:null },
+      { id:11, time:'07:00', stadium:'费城体育场', group:'E组', home:{name:'科特迪瓦',flag:'🇨🇮',code:'CIV'}, away:{name:'厄瓜多尔',flag:'🇪🇨',code:'ECU'}, status:'done', realScore:'1 - 0', correct:null },
+      { id:12, time:'10:00', stadium:'瓜达卢佩体育场', group:'F组', home:{name:'瑞典',flag:'🇸🇪',code:'SWE'}, away:{name:'突尼斯',flag:'🇹🇳',code:'TUN'}, status:'done', realScore:'5 - 1', correct:null }
+    ]
+  },
+  '2026-06-16': {
+    date: '2026年6月16日 星期二',
+    stage: '小组赛第1轮',
+    matches: [
+      { id:13, time:'00:00', stadium:'亚特兰大梅赛德斯奔驰体育场', group:'H组', home:{name:'西班牙',flag:'🇪🇸',code:'ESP'}, away:{name:'佛得角',flag:'🇨🇻',code:'CPV'}, status:'done', realScore:'0 - 0', correct:null },
+      { id:14, time:'03:00', stadium:'西雅图流明体育场', group:'G组', home:{name:'比利时',flag:'🇧🇪',code:'BEL'}, away:{name:'埃及',flag:'🇪🇬',code:'EGY'}, status:'done', realScore:'1 - 1', correct:null },
+      { id:15, time:'06:00', stadium:'迈阿密体育场', group:'H组', home:{name:'沙特阿拉伯',flag:'🇸🇦',code:'KSA'}, away:{name:'乌拉圭',flag:'🇺🇾',code:'URU'}, status:'done', realScore:'1 - 1', correct:null },
+      { id:16, time:'09:00', stadium:'堪萨斯城箭头体育场', group:'G组', home:{name:'伊朗',flag:'🇮🇷',code:'IRN'}, away:{name:'新西兰',flag:'🇳🇿',code:'NZL'}, status:'done', realScore:'2 - 2', correct:null }
+    ]
+  },
+  '2026-06-17': {
+    date: '2026年6月17日 星期三',
+    stage: '小组赛第1轮',
+    matches: [
+      { id:17, time:'03:00', stadium:'纽约大都会球场', group:'I组', home:{name:'法国',flag:'🇫🇷',code:'FRA'}, away:{name:'塞内加尔',flag:'🇸🇳',code:'SEN'}, status:'done', realScore:'3 - 1', prediction:{score:'2 - 0',winner:'法国胜',type:'win',confidence:'高'}, correct:false },
+      { id:18, time:'06:00', stadium:'波士顿吉列球场', group:'I组', home:{name:'伊拉克',flag:'🇮🇶',code:'IRQ'}, away:{name:'挪威',flag:'🇳🇴',code:'NOR'}, status:'done', realScore:'1 - 4', prediction:{score:'0 - 3',winner:'挪威胜',type:'win',confidence:'很高'}, correct:false },
+      { id:19, time:'09:00', stadium:'堪萨斯城箭头体育场', group:'J组', home:{name:'阿根廷',flag:'🇦🇷',code:'ARG'}, away:{name:'阿尔及利亚',flag:'🇩🇿',code:'ALG'}, status:'done', realScore:'3 - 0', prediction:{score:'2 - 0',winner:'阿根廷胜',type:'win',confidence:'很高'}, correct:false },
+      { id:20, time:'12:00', stadium:'圣克拉拉李维斯球场', group:'J组', home:{name:'奥地利',flag:'🇦🇹',code:'AUT'}, away:{name:'约旦',flag:'🇯🇴',code:'JOR'}, status:'live', realScore:'1 - 0', prediction:{score:'2 - 0',winner:'奥地利胜',type:'win',confidence:'高'}, correct:null }
+    ]
+  },
+  '2026-06-18': {
+    date: '2026年6月18日 星期四',
+    stage: '小组赛第1轮',
+    matches: [
+      { id:21, time:'01:00', stadium:'达拉斯AT&T体育场', group:'K组', home:{name:'葡萄牙',flag:'🇵🇹',code:'POR'}, away:{name:'刚果(金)',flag:'🇨🇩',code:'COD'}, status:'upcoming', prediction:{score:'4 - 0',winner:'葡萄牙胜',type:'win',confidence:'很高'}, correct:null },
+      { id:22, time:'04:00', stadium:'阿灵顿AT&T体育场', group:'L组', home:{name:'英格兰',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',code:'ENG'}, away:{name:'克罗地亚',flag:'🇭🇷',code:'CRO'}, status:'upcoming', prediction:{score:'2 - 1',winner:'英格兰胜',type:'win',confidence:'高'}, correct:null },
+      { id:23, time:'07:00', stadium:'洛杉矶SoFi体育场', group:'L组', home:{name:'加纳',flag:'🇬🇭',code:'GHA'}, away:{name:'巴拿马',flag:'🇵🇦',code:'PAN'}, status:'upcoming', prediction:{score:'2 - 0',winner:'加纳胜',type:'win',confidence:'中'}, correct:null },
+      { id:24, time:'10:00', stadium:'旧金山湾区体育场', group:'K组', home:{name:'乌兹别克斯坦',flag:'🇺🇿',code:'UZB'}, away:{name:'哥伦比亚',flag:'🇨🇴',code:'COL'}, status:'upcoming', prediction:{score:'0 - 3',winner:'哥伦比亚胜',type:'win',confidence:'高'}, correct:null }
+    ]
+  },
+  '2026-06-19': {
+    date: '2026年6月19日 星期五',
+    stage: '小组赛第2轮',
+    matches: [
+      { id:25, time:'00:00', stadium:'亚特兰大体育场', group:'A组', home:{name:'捷克',flag:'🇨🇿',code:'CZE'}, away:{name:'南非',flag:'🇿🇦',code:'RSA'}, status:'upcoming', prediction:{score:'1 - 1',winner:'平局',type:'draw',confidence:'中'}, correct:null },
+      { id:26, time:'03:00', stadium:'洛杉矶体育场', group:'B组', home:{name:'瑞士',flag:'🇨🇭',code:'SUI'}, away:{name:'波黑',flag:'🇧🇦',code:'BIH'}, status:'upcoming', prediction:{score:'2 - 1',winner:'瑞士胜',type:'win',confidence:'中'}, correct:null },
+      { id:27, time:'06:00', stadium:'温哥华体育场', group:'B组', home:{name:'加拿大',flag:'🇨🇦',code:'CAN'}, away:{name:'卡塔尔',flag:'🇶🇦',code:'QAT'}, status:'upcoming', prediction:{score:'1 - 0',winner:'加拿大胜',type:'win',confidence:'中'}, correct:null },
+      { id:28, time:'09:00', stadium:'瓜达拉哈拉体育场', group:'A组', home:{name:'墨西哥',flag:'🇲🇽',code:'MEX'}, away:{name:'韩国',flag:'🇰🇷',code:'KOR'}, status:'upcoming', prediction:{score:'2 - 0',winner:'墨西哥胜',type:'win',confidence:'高'}, correct:null },
+      { id:29, time:'12:00', stadium:'纽约大都会球场', group:'D组', home:{name:'土耳其',flag:'🇹🇷',code:'TUR'}, away:{name:'巴拉圭',flag:'🇵🇾',code:'PAR'}, status:'upcoming', prediction:{score:'1 - 1',winner:'平局',type:'draw',confidence:'中'}, correct:null }
+    ]
+  },
+  '2026-06-20': {
+    date: '2026年6月20日 星期六',
+    stage: '小组赛第2轮',
+    matches: [
+      { id:30, time:'03:00', stadium:'西雅图体育场', group:'D组', home:{name:'美国',flag:'🇺🇸',code:'USA'}, away:{name:'澳大利亚',flag:'🇦🇺',code:'AUS'}, status:'upcoming', prediction:{score:'2 - 1',winner:'美国胜',type:'win',confidence:'高'}, correct:null },
+      { id:31, time:'06:00', stadium:'波士顿吉列球场', group:'C组', home:{name:'苏格兰',flag:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',code:'SCO'}, away:{name:'摩洛哥',flag:'🇲🇦',code:'MAR'}, status:'upcoming', prediction:{score:'0 - 1',winner:'摩洛哥胜',type:'win',confidence:'中'}, correct:null },
+      { id:32, time:'09:00', stadium:'费城体育场', group:'C组', home:{name:'巴西',flag:'🇧🇷',code:'BRA'}, away:{name:'海地',flag:'🇭🇹',code:'HAI'}, status:'upcoming', prediction:{score:'3 - 0',winner:'巴西胜',type:'win',confidence:'很高'}, correct:null }
+    ]
+  },
+  '2026-06-21': {
+    date: '2026年6月21日 星期日',
+    stage: '小组赛第2轮',
+    matches: [
+      { id:33, time:'01:00', stadium:'休斯顿体育场', group:'F组', home:{name:'荷兰',flag:'🇳🇱',code:'NED'}, away:{name:'瑞典',flag:'🇸🇪',code:'SWE'}, status:'upcoming', prediction:{score:'2 - 2',winner:'平局',type:'draw',confidence:'中'}, correct:null },
+      { id:34, time:'04:00', stadium:'多伦多体育场', group:'E组', home:{name:'德国',flag:'🇩🇪',code:'GER'}, away:{name:'科特迪瓦',flag:'🇨🇮',code:'CIV'}, status:'upcoming', prediction:{score:'3 - 1',winner:'德国胜',type:'win',confidence:'高'}, correct:null },
+      { id:35, time:'08:00', stadium:'堪萨斯城箭头体育场', group:'E组', home:{name:'厄瓜多尔',flag:'🇪🇨',code:'ECU'}, away:{name:'库拉索',flag:'🇨🇼',code:'CUW'}, status:'upcoming', prediction:{score:'2 - 0',winner:'厄瓜多尔胜',type:'win',confidence:'中'}, correct:null },
+      { id:36, time:'12:00', stadium:'蒙特雷体育场', group:'F组', home:{name:'突尼斯',flag:'🇹🇳',code:'TUN'}, away:{name:'日本',flag:'🇯🇵',code:'JPN'}, status:'upcoming', prediction:{score:'0 - 2',winner:'日本胜',type:'win',confidence:'高'}, correct:null }
+    ]
+  },
+  '2026-06-22': {
+    date: '2026年6月22日 星期一',
+    stage: '小组赛第2轮',
+    matches: [
+      { id:37, time:'00:00', stadium:'亚特兰大体育场', group:'H组', home:{name:'西班牙',flag:'🇪🇸',code:'ESP'}, away:{name:'沙特阿拉伯',flag:'🇸🇦',code:'KSA'}, status:'upcoming', prediction:{score:'3 - 0',winner:'西班牙胜',type:'win',confidence:'很高'}, correct:null },
+      { id:38, time:'03:00', stadium:'洛杉矶体育场', group:'G组', home:{name:'比利时',flag:'🇧🇪',code:'BEL'}, away:{name:'伊朗',flag:'🇮🇷',code:'IRN'}, status:'upcoming', prediction:{score:'2 - 1',winner:'比利时胜',type:'win',confidence:'中'}, correct:null },
+      { id:39, time:'06:00', stadium:'迈阿密体育场', group:'H组', home:{name:'乌拉圭',flag:'🇺🇾',code:'URU'}, away:{name:'佛得角',flag:'🇨🇻',code:'CPV'}, status:'upcoming', prediction:{score:'2 - 0',winner:'乌拉圭胜',type:'win',confidence:'高'}, correct:null },
+      { id:40, time:'09:00', stadium:'温哥华体育场', group:'G组', home:{name:'新西兰',flag:'🇳🇿',code:'NZL'}, away:{name:'埃及',flag:'🇪🇬',code:'EGY'}, status:'upcoming', prediction:{score:'0 - 1',winner:'埃及胜',type:'win',confidence:'中'}, correct:null }
+    ]
+  },
+  '2026-06-23': {
+    date: '2026年6月23日 星期二',
+    stage: '小组赛第2轮',
+    matches: [
+      { id:41, time:'01:00', stadium:'达拉斯体育场', group:'J组', home:{name:'阿根廷',flag:'🇦🇷',code:'ARG'}, away:{name:'奥地利',flag:'🇦🇹',code:'AUT'}, status:'upcoming', prediction:{score:'2 - 0',winner:'阿根廷胜',type:'win',confidence:'高'}, correct:null },
+      { id:42, time:'05:00', stadium:'费城体育场', group:'I组', home:{name:'法国',flag:'🇫🇷',code:'FRA'}, away:{name:'伊拉克',flag:'🇮🇶',code:'IRQ'}, status:'upcoming', prediction:{score:'3 - 0',winner:'法国胜',type:'win',confidence:'很高'}, correct:null },
+      { id:43, time:'08:00', stadium:'纽约大都会球场', group:'I组', home:{name:'挪威',flag:'🇳🇴',code:'NOR'}, away:{name:'塞内加尔',flag:'🇸🇳',code:'SEN'}, status:'upcoming', prediction:{score:'2 - 1',winner:'挪威胜',type:'win',confidence:'中'}, correct:null },
+      { id:44, time:'11:00', stadium:'旧金山湾区体育场', group:'J组', home:{name:'约旦',flag:'🇯🇴',code:'JOR'}, away:{name:'阿尔及利亚',flag:'🇩🇿',code:'ALG'}, status:'upcoming', prediction:{score:'0 - 2',winner:'阿尔及利亚胜',type:'win',confidence:'高'}, correct:null }
+    ]
+  },
+  '2026-06-24': {
+    date: '2026年6月24日 星期三',
+    stage: '小组赛第2轮',
+    matches: [
+      { id:45, time:'01:00', stadium:'休斯顿体育场', group:'K组', home:{name:'葡萄牙',flag:'🇵🇹',code:'POR'}, away:{name:'乌兹别克斯坦',flag:'🇺🇿',code:'UZB'}, status:'upcoming', prediction:{score:'3 - 0',winner:'葡萄牙胜',type:'win',confidence:'很高'}, correct:null },
+      { id:46, time:'04:00', stadium:'波士顿吉列球场', group:'L组', home:{name:'英格兰',flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿',code:'ENG'}, away:{name:'加纳',flag:'🇬🇭',code:'GHA'}, status:'upcoming', prediction:{score:'2 - 0',winner:'英格兰胜',type:'win',confidence:'高'}, correct:null },
+      { id:47, time:'07:00', stadium:'多伦多体育场', group:'L组', home:{name:'巴拿马',flag:'🇵🇦',code:'PAN'}, away:{name:'克罗地亚',flag:'🇭🇷',code:'CRO'}, status:'upcoming', prediction:{score:'0 - 2',winner:'克罗地亚胜',type:'win',confidence:'高'}, correct:null },
+      { id:48, time:'10:00', stadium:'瓜达拉哈拉体育场', group:'K组', home:{name:'哥伦比亚',flag:'🇨🇴',code:'COL'}, away:{name:'刚果(金)',flag:'🇨🇩',code:'COD'}, status:'upcoming', prediction:{score:'2 - 0',winner:'哥伦比亚胜',type:'win',confidence:'高'}, correct:null }
+    ]
+  }
+};
+
+// === State ===
+let currentDate = '2026-06-17';
+
+// === Render ===
+function getStatusLabel(status) {
+  if (status === 'done') return '已结束';
+  if (status === 'live') return '进行中';
+  return '即将开始';
+}
+
+function getStatusClass(status) {
+  if (status === 'done') return 'done-badge';
+  if (status === 'live') return 'live-badge';
+  return 'upcoming-badge';
+}
+
+// Generate probabilities from prediction data
+function generateProbs(pred) {
+  const type = pred.type; // 'win' | 'draw'
+  const conf = pred.confidence;
+  const baseMap = {
+    win:  { high: {home:58,draw:24,away:18}, higher: {home:72,draw:18,away:10}, mid: {home:52,draw:26,away:22} },
+    draw: { high: {home:28,draw:44,away:28}, higher: {home:24,draw:52,away:24}, mid: {home:32,draw:36,away:32} }
+  };
+  const confKey = conf === '很高' ? 'higher' : conf === '高' ? 'high' : 'mid';
+  const base = baseMap[type]?.[confKey] || baseMap.win.mid;
+  // Add small randomness for variety
+  const jitter = () => (Math.random() - 0.5) * 4;
+  return {
+    home: Math.round(Math.max(5, Math.min(85, base.home + jitter()))),
+    draw: Math.round(Math.max(5, Math.min(60, base.draw + jitter()))),
+    away: Math.round(Math.max(5, Math.min(85, base.away + jitter())))
+  };
+}
+
+// Generate key factors
+function generateFactors(match) {
+  const factors = [];
+  // Factor from group context
+  factors.push(match.group);
+  // Factor from prediction
+  if (match.prediction) {
+    if (match.prediction.type === 'win') {
+      factors.push(match.prediction.winner.replace('胜','') + '实力占优');
+    } else {
+      factors.push('双方实力接近');
+    }
+  }
+  // Factor from status
+  if (match.status === 'live') factors.push('比赛进行中');
+  else if (match.status === 'done') factors.push('已完赛');
+  // Stadium factor (use last word as key factor)
+  const stadiumWords = match.stadium.replace(/体育场$/,'').split('').slice(-3).join('');
+  if (match.stadium.includes('阿兹特克')) factors.push('高海拔主场');
+  else if (match.home.name === '美国' || match.home.name === '加拿大' || match.home.name === '墨西哥') factors.push('东道主优势');
+  else factors.push('中立场地');
+  return factors.slice(0, 3);
+}
+
+// Render model consensus
+function renderConsensus() {
+  const models = [
+    { name: 'Claude Sonnet 4.6', pts: 42, rank: 1 },
+    { name: 'DeepSeek V4 Pro', pts: 39, rank: 2 },
+    { name: 'GPT-5.5', pts: 36, rank: 3 },
+    { name: 'Claude Fable 5', pts: 33, rank: 4 },
+    { name: 'MiniMax M3', pts: 30, rank: 5 },
+    { name: 'Gemini 3.5 Flash', pts: 27, rank: 6 },
+    { name: 'DeepSeek V4 Flash', pts: 24, rank: 7 },
+    { name: 'GLM-5.1', pts: 21, rank: 8 }
+  ];
+  const container = document.getElementById('consensusModels');
+  container.innerHTML = models.map(m =>
+    `<div class="consensus-model">
+      <span class="model-rank">#${m.rank}</span>
+      <span class="model-name">${m.name}</span>
+      <span class="model-pts">${m.pts} pts</span>
+    </div>`
+  ).join('');
+}
+
+function renderMatches() {
+  const data = matchData[currentDate];
+  const dates = Object.keys(matchData).sort();
+  const todayIdx = dates.indexOf('2026-06-17');
+  const currentIdx = dates.indexOf(currentDate);
+
+  // Date label with stage
+  const stageText = data.stage ? ' · ' + data.stage : '';
+  document.getElementById('dateLabel').textContent = data.date + stageText;
+
+  // Header badge: show if historical / today / future
+  const badgeRow = document.querySelector('.badge-row');
+  let badgeHTML = '';
+  if (currentIdx < todayIdx) {
+    badgeHTML = '<span class="badge" style="border-color:#10b981;color:#10b981">历史回顾</span>';
+  } else if (currentIdx === todayIdx) {
+    badgeHTML = '<span class="badge" style="border-color:#f59e0b;color:#f59e0b">今日赛程</span>';
+  } else {
+    badgeHTML = '<span class="badge" style="border-color:#3b82f6;color:#3b82f6">预测前瞻</span>';
+  }
+  badgeHTML += '<span class="badge">' + data.stage + '</span>';
+  const groups = [...new Set(data.matches.map(m => m.group))].sort();
+  badgeHTML += '<span class="badge" id="groupBadge">' + groups.join(' · ') + '</span>';
+  const hasLive = data.matches.some(m => m.status === 'live');
+  if (hasLive) badgeHTML += '<span class="badge live" id="liveBadge">' + data.matches.filter(m => m.status === 'live').length + ' 场进行中</span>';
+  badgeRow.innerHTML = badgeHTML;
+
+  const container = document.getElementById('matchesContainer');
+  let html = '';
+
+  data.matches.forEach(m => {
+    const statusLabel = getStatusLabel(m.status);
+    const statusClass = getStatusClass(m.status);
+
+    const hasPrediction = !!m.prediction;
+    const isHistorical = !hasPrediction; // no prediction data = pure historical results
+
+    let scoreDisplay, scoreLabel;
+    if (m.status === 'upcoming') {
+      scoreDisplay = 'vs';
+      scoreLabel = hasPrediction ? 'AI预测' : '';
+    } else {
+      scoreDisplay = m.realScore;
+      scoreLabel = m.status === 'live' ? '实时' : '终场';
+    }
+    const scoreClass = (m.status === 'upcoming') ? 'vs' : '';
+
+    // Prediction row
+    let predictionRow = '';
+    let probRow = '';
+    let factorsRow = '';
+    if (hasPrediction) {
+      const confMap = { '很高': '≥85%', '高': '75-85%', '中': '55-75%' };
+      const confText = confMap[m.prediction.confidence] || m.prediction.confidence;
+
+      let correctTag = '';
+      if (m.correct === true) correctTag = '<span class="pred-tag correct-tag">预测正确 ✓</span>';
+      else if (m.correct === false) correctTag = '<span class="pred-tag lose">预测失误 ✗</span>';
+
+      predictionRow = `
+      <div class="prediction-row">
+        <span class="pred-tag score-pred">AI预测 ${m.prediction.score}</span>
+        <span class="pred-tag ${m.prediction.type}">${m.prediction.winner}</span>
+        <span class="pred-tag confidence">置信度 ${confText}</span>
+        ${correctTag}
+      </div>`;
+
+      // Probability bars
+      const probs = generateProbs(m.prediction);
+      probRow = `
+      <div class="prob-row">
+        <div class="prob-item home">
+          <span class="prob-label">主胜</span>
+          <span class="prob-pct">${probs.home}%</span>
+          <div class="prob-bar-bg"><div class="prob-bar-fill home-fill" style="width:${probs.home}%"></div></div>
+        </div>
+        <div class="prob-divider"></div>
+        <div class="prob-item draw">
+          <span class="prob-label">平局</span>
+          <span class="prob-pct">${probs.draw}%</span>
+          <div class="prob-bar-bg"><div class="prob-bar-fill draw-fill" style="width:${probs.draw}%"></div></div>
+        </div>
+        <div class="prob-divider"></div>
+        <div class="prob-item away">
+          <span class="prob-label">客胜</span>
+          <span class="prob-pct">${probs.away}%</span>
+          <div class="prob-bar-bg"><div class="prob-bar-fill away-fill" style="width:${probs.away}%"></div></div>
+        </div>
+      </div>`;
+
+      // Key factors
+      const factors = generateFactors(m);
+      factorsRow = `
+      <div class="factors-row">
+        <span class="factors-label">关键因素</span>
+        ${factors.map(f => `<span class="factor-tag">${f}</span>`).join('')}
+      </div>`;
+    }
+
+    html += `
+    <div class="match-card">
+      <div class="card-top">
+        <div class="left-tags">
+          <span class="status-badge ${statusClass}">${statusLabel}</span>
+          <span class="group-tag">${m.group}</span>
+        </div>
+        <div class="right-info">
+          <span>${m.time} (北京)</span>
+          <span class="stadium">${m.stadium}</span>
+        </div>
+      </div>
+      <div class="teams-row">
+        <div class="team">
+          <span class="flag">${m.home.flag}</span>
+          <span class="name">${m.home.name}<small>${m.home.code}</small></span>
+        </div>
+        <div class="score-box">
+          <span class="score ${scoreClass}">${scoreDisplay}</span>
+          ${scoreLabel ? '<span class="score-label" style="color:' + (m.status==='live'?'#ef4444':m.status==='done'?'#10b981':'#60a5fa') + '">' + scoreLabel + '</span>' : ''}
+        </div>
+        <div class="team">
+          <span class="flag">${m.away.flag}</span>
+          <span class="name">${m.away.name}<small>${m.away.code}</small></span>
+        </div>
+      </div>
+      ${predictionRow}
+      ${probRow}
+      ${factorsRow}
+    </div>`;
+  });
+
+  container.innerHTML = html;
+  updateSummary(data);
+}
+
+function updateSummary(data) {
+  const total = data.matches.length;
+  const done = data.matches.filter(m => m.status === 'done').length;
+  const live = data.matches.filter(m => m.status === 'live').length;
+  const predicted = data.matches.filter(m => !!m.prediction).length;
+
+  // prediction accuracy
+  const predictedDone = data.matches.filter(m => m.prediction && m.status === 'done');
+  const correctCount = predictedDone.filter(m => m.correct === true).length;
+  const accuracy = predictedDone.length > 0 ? Math.round(correctCount / predictedDone.length * 100) : '--';
+
+  // avg goals
+  let avgGoals = '--';
+  const withScores = data.matches.filter(m => m.realScore);
+  if (withScores.length > 0) {
+    avgGoals = (withScores.reduce((s, m) => {
+      const parts = m.realScore.split(' - ');
+      return s + parseInt(parts[0]) + parseInt(parts[1]);
+    }, 0) / withScores.length).toFixed(1);
+  }
+
+  // Determine mode
+  const dates = Object.keys(matchData).sort();
+  const todayIdx = dates.indexOf('2026-06-17');
+  const currentIdx = dates.indexOf(currentDate);
+
+  let title;
+  if (currentIdx < todayIdx) {
+    title = '历史战绩回顾';
+  } else if (currentIdx === todayIdx) {
+    title = '今日预测 & 赛果';
+  } else {
+    title = 'AI 预测前瞻';
+  }
+
+  let statHTML = `<span class="stat"><strong>比赛数:</strong> ${total} 场</span>`;
+  if (done > 0) statHTML += `<span class="stat"><strong>已结束:</strong> ${done} 场</span>`;
+  if (live > 0) statHTML += `<span class="stat" style="color:#ef4444"><strong>进行中:</strong> ${live} 场</span>`;
+  if (predicted > 0 && predictedDone.length > 0) statHTML += `<span class="stat"><strong>预测准确率:</strong> ${accuracy}%</span>`;
+  if (withScores.length > 0) statHTML += `<span class="stat"><strong>场均进球:</strong> ${avgGoals}</span>`;
+  if (predicted > 0 && predictedDone.length === 0) statHTML += `<span class="stat"><strong>已预测:</strong> ${predicted} 场</span>`;
+
+  document.getElementById('summary').innerHTML = `
+    <h3>${title}</h3>
+    <div class="stat-row">${statHTML}</div>`;
+}
+
+function prevDay() {
+  const dates = Object.keys(matchData).sort();
+  const idx = dates.indexOf(currentDate);
+  if (idx > 0) {
+    currentDate = dates[idx - 1];
+    renderMatches();
+  }
+}
+
+function nextDay() {
+  const dates = Object.keys(matchData).sort();
+  const idx = dates.indexOf(currentDate);
+  if (idx < dates.length - 1) {
+    currentDate = dates[idx + 1];
+    renderMatches();
+  }
+}
+
+function goToday() {
+  currentDate = '2026-06-17';
+  renderMatches();
+}
+
+// === Calendar ===
+let calYear = 2026, calMonth = 6;
+
+function getMatchDates() {
+  return Object.keys(matchData);
+}
+
+// === Calendar Popover ===
+let popoverTimer = null;
+
+function showCalPopover(e, dateStr) {
+  clearTimeout(popoverTimer);
+  const matches = matchData[dateStr]?.matches;
+  if (!matches || matches.length === 0) return;
+
+  const popover = document.getElementById('calPopover');
+  const [, m, d] = dateStr.split('-');
+
+  let html = `<div class="pop-date">${m}月${parseInt(d)}日 赛程</div>`;
+  matches.forEach(match => {
+    const time = match.time || '';
+    const flagH = match.home?.flag || '';
+    const flagA = match.away?.flag || '';
+    const nameH = match.home?.name || match.home?.code || '';
+    const nameA = match.away?.name || match.away?.code || '';
+    let score = '';
+    if (match.status === 'done' && match.realScore) {
+      score = match.realScore;
+    } else if (match.status === 'live' && match.realScore) {
+      score = match.realScore + ' 🔴';
+    } else if (match.prediction && match.prediction.score) {
+      score = match.prediction.score + ' (预)';
+    } else {
+      score = '- : -';
+    }
+    html += `<div class="pop-match">
+      <span class="pop-time">${time}</span>
+      <span class="pop-flags">${flagH} ${flagA}</span>
+      <span class="pop-teams">${nameH} vs ${nameA}</span>
+      <span class="pop-score">${score}</span>
+    </div>`;
+  });
+
+  popover.innerHTML = html;
+  popover.classList.add('show');
+
+  // Position: to the right of the calendar
+  const calEl = document.getElementById('miniCalendar');
+  const calRect = calEl.getBoundingClientRect();
+  let left = calRect.right + 12;
+  let top = e.clientY - 80;
+
+  // Keep within viewport
+  if (left + 310 > window.innerWidth) left = calRect.left - 310 - 12;
+  top = Math.max(10, Math.min(top, window.innerHeight - popover.offsetHeight - 10));
+
+  popover.style.left = left + 'px';
+  popover.style.top = top + 'px';
+}
+
+function hideCalPopover() {
+  popoverTimer = setTimeout(() => {
+    const popover = document.getElementById('calPopover');
+    popover.classList.remove('show');
+  }, 150);
+}
+
+function renderCalendar() {
+  const matchDates = getMatchDates();
+  const today = '2026-06-17';
+
+  document.getElementById('calMonthLabel').textContent = calYear + '年' + calMonth + '月';
+
+  const firstDay = new Date(calYear, calMonth - 1, 1).getDay();
+  const daysInMonth = new Date(calYear, calMonth, 0).getDate();
+
+  const grid = document.getElementById('calGrid');
+  let html = '';
+
+  // Empty cells before first day
+  for (let i = 0; i < firstDay; i++) {
+    html += '<div class="cal-day empty"></div>';
+  }
+
+  for (let d = 1; d <= daysInMonth; d++) {
+    const dateStr = calYear + '-' + String(calMonth).padStart(2,'0') + '-' + String(d).padStart(2,'0');
+    const hasMatch = matchDates.includes(dateStr);
+    const isToday = dateStr === today;
+    const isActive = dateStr === currentDate;
+
+    let cls = 'cal-day';
+    if (hasMatch) cls += ' has-match';
+    if (isToday) cls += ' today';
+    if (isActive) cls += ' active-date';
+
+    const onclick = hasMatch ? ` onclick="jumpToDate('${dateStr}')"` : '';
+    const onenter = hasMatch ? ` onmouseenter="showCalPopover(event,'${dateStr}')"` : '';
+    const onleave = hasMatch ? ` onmouseleave="hideCalPopover()"` : '';
+    const dot = hasMatch ? '<span class="dot"></span>' : '';
+
+    html += `<div class="${cls}"${onclick}${onenter}${onleave}>${d}${dot}</div>`;
+  }
+
+  grid.innerHTML = html;
+}
+
+function toggleCalendar() {
+  const cal = document.getElementById('miniCalendar');
+  const btn = document.getElementById('calToggle');
+  cal.classList.toggle('open');
+  btn.classList.toggle('active');
+  if (cal.classList.contains('open')) renderCalendar();
+}
+
+function jumpToDate(dateStr) {
+  currentDate = dateStr;
+  renderMatches();
+  renderCalendar();
+  document.getElementById('miniCalendar').classList.remove('open');
+  document.getElementById('calToggle').classList.remove('active');
+}
+
+function calPrevMonth() {
+  if (calMonth === 1) { calMonth = 12; calYear--; }
+  else calMonth--;
+  renderCalendar();
+}
+
+function calNextMonth() {
+  if (calMonth === 12) { calMonth = 1; calYear++; }
+  else calMonth++;
+  renderCalendar();
+}
+
+// === Init ===
+renderMatches();
+renderCalendar();
+renderConsensus();
+</script>
+</body>
+</html>
