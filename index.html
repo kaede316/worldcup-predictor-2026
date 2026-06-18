@@ -845,8 +845,17 @@ const matchData = {
   }
 };
 
+function getTodayStr() {
+  const now = new Date();
+  const y = now.getFullYear();
+  const m = String(now.getMonth() + 1).padStart(2, '0');
+  const d = String(now.getDate()).padStart(2, '0');
+  return y + '-' + m + '-' + d;
+}
+
 // === State ===
-let currentDate = '2026-06-17';
+
+let currentDate = getTodayStr();
 
 // === Render ===
 function getStatusLabel(status) {
@@ -929,7 +938,7 @@ function renderConsensus() {
 function renderMatches() {
   const data = matchData[currentDate];
   const dates = Object.keys(matchData).sort();
-  const todayIdx = dates.indexOf('2026-06-17');
+  const todayIdx = dates.indexOf(getTodayStr());
   const currentIdx = dates.indexOf(currentDate);
 
   // Date label with stage
@@ -1084,7 +1093,7 @@ function updateSummary(data) {
 
   // Determine mode
   const dates = Object.keys(matchData).sort();
-  const todayIdx = dates.indexOf('2026-06-17');
+  const todayIdx = dates.indexOf(getTodayStr());
   const currentIdx = dates.indexOf(currentDate);
 
   let title;
@@ -1127,7 +1136,7 @@ function nextDay() {
 }
 
 function goToday() {
-  currentDate = '2026-06-17';
+  currentDate = getTodayStr();
   renderMatches();
 }
 
@@ -1200,7 +1209,7 @@ function hideCalPopover() {
 
 function renderCalendar() {
   const matchDates = getMatchDates();
-  const today = '2026-06-17';
+  const today = getTodayStr();
 
   document.getElementById('calMonthLabel').textContent = calYear + '年' + calMonth + '月';
 
