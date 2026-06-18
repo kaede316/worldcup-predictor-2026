@@ -1,0 +1,1136 @@
+{
+  "2026-06-12": {
+    "matches": [
+      {
+        "time": "03:00",
+        "stadium": "墨西哥城阿兹特克体育场",
+        "group": "A组",
+        "home": {
+          "name": "墨西哥",
+          "code": "MEX"
+        },
+        "away": {
+          "name": "南非",
+          "code": "RSA"
+        },
+        "status": "done",
+        "realScore": "2 - 0"
+      },
+      {
+        "time": "10:00",
+        "stadium": "瓜达拉哈拉体育场",
+        "group": "A组",
+        "home": {
+          "name": "韩国",
+          "code": "KOR"
+        },
+        "away": {
+          "name": "捷克",
+          "code": "CZE"
+        },
+        "status": "done",
+        "realScore": "2 - 1"
+      }
+    ],
+    "date": "2026年6月12日 星期五",
+    "stage": "小组赛第1轮"
+  },
+  "2026-06-13": {
+    "matches": [
+      {
+        "time": "05:00",
+        "stadium": "蒙特雷体育场",
+        "group": "B组",
+        "home": {
+          "name": "加拿大",
+          "code": "CAN"
+        },
+        "away": {
+          "name": "波黑",
+          "code": "BIH"
+        },
+        "status": "done",
+        "realScore": "1 - 1"
+      },
+      {
+        "time": "08:00",
+        "stadium": "堪萨斯城体育场",
+        "group": "D组",
+        "home": {
+          "name": "美国",
+          "code": "USA"
+        },
+        "away": {
+          "name": "巴拉圭",
+          "code": "PAR"
+        },
+        "status": "done",
+        "realScore": "4 - 1"
+      }
+    ],
+    "date": "2026年6月13日 星期六",
+    "stage": "小组赛第1轮"
+  },
+  "2026-06-14": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "迈阿密体育场",
+        "group": "B组",
+        "home": {
+          "name": "卡塔尔",
+          "code": "QAT"
+        },
+        "away": {
+          "name": "瑞士",
+          "code": "SUI"
+        },
+        "status": "done",
+        "realScore": "1 - 1"
+      },
+      {
+        "time": "08:00",
+        "stadium": "费城体育场",
+        "group": "C组",
+        "home": {
+          "name": "巴西",
+          "code": "BRA"
+        },
+        "away": {
+          "name": "摩洛哥",
+          "code": "MAR"
+        },
+        "status": "done",
+        "realScore": "1 - 1"
+      },
+      {
+        "time": "11:00",
+        "stadium": "休斯顿体育场",
+        "group": "C组",
+        "home": {
+          "name": "海地",
+          "code": "HAI"
+        },
+        "away": {
+          "name": "苏格兰",
+          "code": "SCO"
+        },
+        "status": "done",
+        "realScore": "0 - 1"
+      },
+      {
+        "time": "11:00",
+        "stadium": "亚特兰大体育场",
+        "group": "D组",
+        "home": {
+          "name": "澳大利亚",
+          "code": "AUS"
+        },
+        "away": {
+          "name": "土耳其",
+          "code": "TUR"
+        },
+        "status": "done",
+        "realScore": "2 - 0"
+      }
+    ],
+    "date": "2026年6月14日 星期日",
+    "stage": "小组赛第1轮"
+  },
+  "2026-06-15": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "圣克拉拉体育场",
+        "group": "E组",
+        "home": {
+          "name": "德国",
+          "code": "GER"
+        },
+        "away": {
+          "name": "库拉索",
+          "code": "CUW"
+        },
+        "status": "done",
+        "realScore": "7 - 1"
+      },
+      {
+        "time": "05:00",
+        "stadium": "洛杉矶SoFi体育场",
+        "group": "F组",
+        "home": {
+          "name": "荷兰",
+          "code": "NED"
+        },
+        "away": {
+          "name": "日本",
+          "code": "JPN"
+        },
+        "status": "done",
+        "realScore": "2 - 2"
+      },
+      {
+        "time": "09:00",
+        "stadium": "达拉斯体育场",
+        "group": "E组",
+        "home": {
+          "name": "科特迪瓦",
+          "code": "CIV"
+        },
+        "away": {
+          "name": "厄瓜多尔",
+          "code": "ECU"
+        },
+        "status": "done",
+        "realScore": "1 - 0"
+      },
+      {
+        "time": "10:00",
+        "stadium": "多伦多体育场",
+        "group": "F组",
+        "home": {
+          "name": "瑞典",
+          "code": "SWE"
+        },
+        "away": {
+          "name": "突尼斯",
+          "code": "TUN"
+        },
+        "status": "done",
+        "realScore": "5 - 1"
+      }
+    ],
+    "date": "2026年6月15日 星期一",
+    "stage": "小组赛第1轮"
+  },
+  "2026-06-16": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "福克斯堡体育场",
+        "group": "H组",
+        "home": {
+          "name": "西班牙",
+          "code": "ESP"
+        },
+        "away": {
+          "name": "佛得角",
+          "code": "CPV"
+        },
+        "status": "done",
+        "realScore": "0 - 0"
+      },
+      {
+        "time": "02:00",
+        "stadium": "西雅图体育场",
+        "group": "G组",
+        "home": {
+          "name": "比利时",
+          "code": "BEL"
+        },
+        "away": {
+          "name": "埃及",
+          "code": "EGY"
+        },
+        "status": "done",
+        "realScore": "1 - 1"
+      },
+      {
+        "time": "08:00",
+        "stadium": "堪萨斯城体育场",
+        "group": "G组",
+        "home": {
+          "name": "伊朗",
+          "code": "IRN"
+        },
+        "away": {
+          "name": "新西兰",
+          "code": "NZL"
+        },
+        "status": "done",
+        "realScore": "2 - 2"
+      },
+      {
+        "time": "08:00",
+        "stadium": "温哥华体育场",
+        "group": "H组",
+        "home": {
+          "name": "沙特阿拉伯",
+          "code": "KSA"
+        },
+        "away": {
+          "name": "乌拉圭",
+          "code": "URU"
+        },
+        "status": "done",
+        "realScore": "1 - 1"
+      }
+    ],
+    "date": "2026年6月16日 星期二",
+    "stage": "小组赛第1轮"
+  },
+  "2026-06-17": {
+    "matches": [
+      {
+        "time": "05:00",
+        "stadium": "费城体育场",
+        "group": "I组",
+        "home": {
+          "name": "法国",
+          "code": "FRA"
+        },
+        "away": {
+          "name": "塞内加尔",
+          "code": "SEN"
+        },
+        "status": "done",
+        "realScore": "3 - 1"
+      },
+      {
+        "time": "08:00",
+        "stadium": "休斯顿体育场",
+        "group": "I组",
+        "home": {
+          "name": "伊拉克",
+          "code": "IRQ"
+        },
+        "away": {
+          "name": "挪威",
+          "code": "NOR"
+        },
+        "status": "done",
+        "realScore": "1 - 4"
+      },
+      {
+        "time": "10:00",
+        "stadium": "新泽西体育场",
+        "group": "J组",
+        "home": {
+          "name": "阿根廷",
+          "code": "ARG"
+        },
+        "away": {
+          "name": "阿尔及利亚",
+          "code": "ALG"
+        },
+        "status": "done",
+        "realScore": "3 - 0"
+      },
+      {
+        "time": "11:00",
+        "stadium": "迈阿密体育场",
+        "group": "J组",
+        "home": {
+          "name": "奥地利",
+          "code": "AUT"
+        },
+        "away": {
+          "name": "约旦",
+          "code": "JOR"
+        },
+        "status": "done",
+        "realScore": "3 - 1"
+      }
+    ],
+    "date": "2026年6月17日 星期三",
+    "stage": "小组赛第1轮"
+  },
+  "2026-06-18": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "圣克拉拉体育场",
+        "group": "K组",
+        "home": {
+          "name": "葡萄牙",
+          "code": "POR"
+        },
+        "away": {
+          "name": "刚果(金)",
+          "code": "COD"
+        },
+        "status": "done",
+        "realScore": "1 - 1"
+      },
+      {
+        "time": "05:00",
+        "stadium": "洛杉矶SoFi体育场",
+        "group": "L组",
+        "home": {
+          "name": "英格兰",
+          "code": "ENG"
+        },
+        "away": {
+          "name": "克罗地亚",
+          "code": "CRO"
+        },
+        "status": "done",
+        "realScore": "4 - 2"
+      },
+      {
+        "time": "09:00",
+        "stadium": "蒙特雷体育场",
+        "group": "L组",
+        "home": {
+          "name": "加纳",
+          "code": "GHA"
+        },
+        "away": {
+          "name": "巴拿马",
+          "code": "PAN"
+        },
+        "status": "done",
+        "realScore": "1 - 0"
+      },
+      {
+        "time": "10:00",
+        "stadium": "墨西哥城阿兹特克体育场",
+        "group": "K组",
+        "home": {
+          "name": "乌兹别克斯坦",
+          "code": "UZB"
+        },
+        "away": {
+          "name": "哥伦比亚",
+          "code": "COL"
+        },
+        "status": "done",
+        "realScore": "1 - 3"
+      }
+    ],
+    "date": "2026年6月18日 星期四",
+    "stage": "小组赛第1轮"
+  },
+  "2026-06-19": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "堪萨斯城体育场",
+        "group": "B组",
+        "home": {
+          "name": "瑞士",
+          "code": "SUI"
+        },
+        "away": {
+          "name": "波黑",
+          "code": "BIH"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "02:00",
+        "stadium": "福克斯堡体育场",
+        "group": "A组",
+        "home": {
+          "name": "捷克",
+          "code": "CZE"
+        },
+        "away": {
+          "name": "南非",
+          "code": "RSA"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "05:00",
+        "stadium": "亚特兰大体育场",
+        "group": "B组",
+        "home": {
+          "name": "加拿大",
+          "code": "CAN"
+        },
+        "away": {
+          "name": "卡塔尔",
+          "code": "QAT"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "瓜达拉哈拉体育场",
+        "group": "A组",
+        "home": {
+          "name": "墨西哥",
+          "code": "MEX"
+        },
+        "away": {
+          "name": "韩国",
+          "code": "KOR"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月19日 星期五",
+    "stage": "小组赛第2轮"
+  },
+  "2026-06-20": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "西雅图体育场",
+        "group": "D组",
+        "home": {
+          "name": "美国",
+          "code": "USA"
+        },
+        "away": {
+          "name": "澳大利亚",
+          "code": "AUS"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "08:00",
+        "stadium": "休斯顿体育场",
+        "group": "C组",
+        "home": {
+          "name": "苏格兰",
+          "code": "SCO"
+        },
+        "away": {
+          "name": "摩洛哥",
+          "code": "MAR"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "10:00",
+        "stadium": "迈阿密体育场",
+        "group": "D组",
+        "home": {
+          "name": "土耳其",
+          "code": "TUR"
+        },
+        "away": {
+          "name": "巴拉圭",
+          "code": "PAR"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "11:00",
+        "stadium": "达拉斯体育场",
+        "group": "C组",
+        "home": {
+          "name": "巴西",
+          "code": "BRA"
+        },
+        "away": {
+          "name": "海地",
+          "code": "HAI"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月20日 星期六",
+    "stage": "小组赛第2轮"
+  },
+  "2026-06-21": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "圣克拉拉体育场",
+        "group": "F组",
+        "home": {
+          "name": "荷兰",
+          "code": "NED"
+        },
+        "away": {
+          "name": "瑞典",
+          "code": "SWE"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "06:00",
+        "stadium": "蒙特雷体育场",
+        "group": "E组",
+        "home": {
+          "name": "德国",
+          "code": "GER"
+        },
+        "away": {
+          "name": "科特迪瓦",
+          "code": "CIV"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "新泽西体育场",
+        "group": "E组",
+        "home": {
+          "name": "厄瓜多尔",
+          "code": "ECU"
+        },
+        "away": {
+          "name": "库拉索",
+          "code": "CUW"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "12:00",
+        "stadium": "多伦多体育场",
+        "group": "F组",
+        "home": {
+          "name": "突尼斯",
+          "code": "TUN"
+        },
+        "away": {
+          "name": "日本",
+          "code": "JPN"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月21日 星期日",
+    "stage": "小组赛第2轮"
+  },
+  "2026-06-22": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "堪萨斯城体育场",
+        "group": "G组",
+        "home": {
+          "name": "比利时",
+          "code": "BEL"
+        },
+        "away": {
+          "name": "伊朗",
+          "code": "IRN"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "02:00",
+        "stadium": "福克斯堡体育场",
+        "group": "H组",
+        "home": {
+          "name": "西班牙",
+          "code": "ESP"
+        },
+        "away": {
+          "name": "沙特阿拉伯",
+          "code": "KSA"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "08:00",
+        "stadium": "亚特兰大体育场",
+        "group": "G组",
+        "home": {
+          "name": "新西兰",
+          "code": "NZL"
+        },
+        "away": {
+          "name": "埃及",
+          "code": "EGY"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "08:00",
+        "stadium": "温哥华体育场",
+        "group": "H组",
+        "home": {
+          "name": "乌拉圭",
+          "code": "URU"
+        },
+        "away": {
+          "name": "佛得角",
+          "code": "CPV"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月22日 星期一",
+    "stage": "小组赛第2轮"
+  },
+  "2026-06-23": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "洛杉矶SoFi体育场",
+        "group": "J组",
+        "home": {
+          "name": "阿根廷",
+          "code": "ARG"
+        },
+        "away": {
+          "name": "奥地利",
+          "code": "AUT"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "07:00",
+        "stadium": "达拉斯体育场",
+        "group": "I组",
+        "home": {
+          "name": "法国",
+          "code": "FRA"
+        },
+        "away": {
+          "name": "伊拉克",
+          "code": "IRQ"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "10:00",
+        "stadium": "费城体育场",
+        "group": "I组",
+        "home": {
+          "name": "挪威",
+          "code": "NOR"
+        },
+        "away": {
+          "name": "塞内加尔",
+          "code": "SEN"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "10:00",
+        "stadium": "迈阿密体育场",
+        "group": "J组",
+        "home": {
+          "name": "约旦",
+          "code": "JOR"
+        },
+        "away": {
+          "name": "阿尔及利亚",
+          "code": "ALG"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月23日 星期二",
+    "stage": "小组赛第2轮"
+  },
+  "2026-06-24": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "圣克拉拉体育场",
+        "group": "K组",
+        "home": {
+          "name": "葡萄牙",
+          "code": "POR"
+        },
+        "away": {
+          "name": "乌兹别克斯坦",
+          "code": "UZB"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "06:00",
+        "stadium": "休斯顿体育场",
+        "group": "L组",
+        "home": {
+          "name": "英格兰",
+          "code": "ENG"
+        },
+        "away": {
+          "name": "加纳",
+          "code": "GHA"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "蒙特雷体育场",
+        "group": "L组",
+        "home": {
+          "name": "巴拿马",
+          "code": "PAN"
+        },
+        "away": {
+          "name": "克罗地亚",
+          "code": "CRO"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "10:00",
+        "stadium": "瓜达拉哈拉体育场",
+        "group": "K组",
+        "home": {
+          "name": "哥伦比亚",
+          "code": "COL"
+        },
+        "away": {
+          "name": "刚果(金)",
+          "code": "COD"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月24日 星期三",
+    "stage": "小组赛第2轮"
+  },
+  "2026-06-25": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "西雅图体育场",
+        "group": "B组",
+        "home": {
+          "name": "波黑",
+          "code": "BIH"
+        },
+        "away": {
+          "name": "卡塔尔",
+          "code": "QAT"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "02:00",
+        "stadium": "亚特兰大体育场",
+        "group": "B组",
+        "home": {
+          "name": "瑞士",
+          "code": "SUI"
+        },
+        "away": {
+          "name": "加拿大",
+          "code": "CAN"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "08:00",
+        "stadium": "温哥华体育场",
+        "group": "C组",
+        "home": {
+          "name": "苏格兰",
+          "code": "SCO"
+        },
+        "away": {
+          "name": "巴西",
+          "code": "BRA"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "08:00",
+        "stadium": "福克斯堡体育场",
+        "group": "C组",
+        "home": {
+          "name": "摩洛哥",
+          "code": "MAR"
+        },
+        "away": {
+          "name": "海地",
+          "code": "HAI"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "多伦多体育场",
+        "group": "A组",
+        "home": {
+          "name": "南非",
+          "code": "RSA"
+        },
+        "away": {
+          "name": "韩国",
+          "code": "KOR"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "墨西哥城阿兹特克体育场",
+        "group": "A组",
+        "home": {
+          "name": "捷克",
+          "code": "CZE"
+        },
+        "away": {
+          "name": "墨西哥",
+          "code": "MEX"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月25日 星期四",
+    "stage": "小组赛第3轮"
+  },
+  "2026-06-26": {
+    "matches": [
+      {
+        "time": "06:00",
+        "stadium": "达拉斯体育场",
+        "group": "E组",
+        "home": {
+          "name": "库拉索",
+          "code": "CUW"
+        },
+        "away": {
+          "name": "科特迪瓦",
+          "code": "CIV"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "06:00",
+        "stadium": "费城体育场",
+        "group": "E组",
+        "home": {
+          "name": "厄瓜多尔",
+          "code": "ECU"
+        },
+        "away": {
+          "name": "德国",
+          "code": "GER"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "08:00",
+        "stadium": "洛杉矶SoFi体育场",
+        "group": "F组",
+        "home": {
+          "name": "日本",
+          "code": "JPN"
+        },
+        "away": {
+          "name": "瑞典",
+          "code": "SWE"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "08:00",
+        "stadium": "新泽西体育场",
+        "group": "F组",
+        "home": {
+          "name": "突尼斯",
+          "code": "TUN"
+        },
+        "away": {
+          "name": "荷兰",
+          "code": "NED"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "迈阿密体育场",
+        "group": "D组",
+        "home": {
+          "name": "巴拉圭",
+          "code": "PAR"
+        },
+        "away": {
+          "name": "澳大利亚",
+          "code": "AUS"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "堪萨斯城体育场",
+        "group": "D组",
+        "home": {
+          "name": "土耳其",
+          "code": "TUR"
+        },
+        "away": {
+          "name": "美国",
+          "code": "USA"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月26日 星期五",
+    "stage": "小组赛第3轮"
+  },
+  "2026-06-27": {
+    "matches": [
+      {
+        "time": "05:00",
+        "stadium": "蒙特雷体育场",
+        "group": "I组",
+        "home": {
+          "name": "塞内加尔",
+          "code": "SEN"
+        },
+        "away": {
+          "name": "伊拉克",
+          "code": "IRQ"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "05:00",
+        "stadium": "休斯顿体育场",
+        "group": "I组",
+        "home": {
+          "name": "挪威",
+          "code": "NOR"
+        },
+        "away": {
+          "name": "法国",
+          "code": "FRA"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "08:00",
+        "stadium": "瓜达拉哈拉体育场",
+        "group": "H组",
+        "home": {
+          "name": "乌拉圭",
+          "code": "URU"
+        },
+        "away": {
+          "name": "西班牙",
+          "code": "ESP"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "圣克拉拉体育场",
+        "group": "H组",
+        "home": {
+          "name": "佛得角",
+          "code": "CPV"
+        },
+        "away": {
+          "name": "沙特阿拉伯",
+          "code": "KSA"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "10:00",
+        "stadium": "西雅图体育场",
+        "group": "G组",
+        "home": {
+          "name": "埃及",
+          "code": "EGY"
+        },
+        "away": {
+          "name": "伊朗",
+          "code": "IRN"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "10:00",
+        "stadium": "亚特兰大体育场",
+        "group": "G组",
+        "home": {
+          "name": "新西兰",
+          "code": "NZL"
+        },
+        "away": {
+          "name": "比利时",
+          "code": "BEL"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月27日 星期六",
+    "stage": "小组赛第3轮"
+  },
+  "2026-06-28": {
+    "matches": [
+      {
+        "time": "07:00",
+        "stadium": "费城体育场",
+        "group": "L组",
+        "home": {
+          "name": "巴拿马",
+          "code": "PAN"
+        },
+        "away": {
+          "name": "英格兰",
+          "code": "ENG"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "07:00",
+        "stadium": "达拉斯体育场",
+        "group": "L组",
+        "home": {
+          "name": "克罗地亚",
+          "code": "CRO"
+        },
+        "away": {
+          "name": "加纳",
+          "code": "GHA"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:30",
+        "stadium": "温哥华体育场",
+        "group": "K组",
+        "home": {
+          "name": "哥伦比亚",
+          "code": "COL"
+        },
+        "away": {
+          "name": "葡萄牙",
+          "code": "POR"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:30",
+        "stadium": "福克斯堡体育场",
+        "group": "K组",
+        "home": {
+          "name": "刚果(金)",
+          "code": "COD"
+        },
+        "away": {
+          "name": "乌兹别克斯坦",
+          "code": "UZB"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "11:00",
+        "stadium": "新泽西体育场",
+        "group": "J组",
+        "home": {
+          "name": "阿尔及利亚",
+          "code": "ALG"
+        },
+        "away": {
+          "name": "奥地利",
+          "code": "AUT"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "11:00",
+        "stadium": "洛杉矶SoFi体育场",
+        "group": "J组",
+        "home": {
+          "name": "约旦",
+          "code": "JOR"
+        },
+        "away": {
+          "name": "阿根廷",
+          "code": "ARG"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月28日 星期日",
+    "stage": "小组赛第3轮"
+  }
+}
