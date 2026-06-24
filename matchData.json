@@ -126,7 +126,7 @@
         },
         "away": {
           "name": "苏格兰",
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "flag": "🏴",
           "code": "SCO"
         },
         "status": "done",
@@ -400,7 +400,7 @@
         "group": "L组",
         "home": {
           "name": "英格兰",
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "flag": "🏴",
           "code": "ENG"
         },
         "away": {
@@ -548,7 +548,7 @@
         "group": "C组",
         "home": {
           "name": "苏格兰",
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "flag": "🏴",
           "code": "SCO"
         },
         "away": {
@@ -835,7 +835,8 @@
           "flag": "🇺🇿",
           "code": "UZB"
         },
-        "status": "upcoming"
+        "status": "done",
+        "realScore": "5 - 0"
       },
       {
         "time": "06:00",
@@ -843,7 +844,7 @@
         "group": "L组",
         "home": {
           "name": "英格兰",
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "flag": "🏴",
           "code": "ENG"
         },
         "away": {
@@ -851,7 +852,8 @@
           "flag": "🇬🇭",
           "code": "GHA"
         },
-        "status": "upcoming"
+        "status": "done",
+        "realScore": "0 - 0"
       },
       {
         "time": "09:00",
@@ -867,7 +869,8 @@
           "flag": "🇭🇷",
           "code": "CRO"
         },
-        "status": "upcoming"
+        "status": "done",
+        "realScore": "0 - 1"
       },
       {
         "time": "10:00",
@@ -883,7 +886,8 @@
           "flag": "🇨🇩",
           "code": "COD"
         },
-        "status": "upcoming"
+        "status": "done",
+        "realScore": "1 - 0"
       }
     ],
     "date": "2026年6月24日 星期三",
@@ -929,7 +933,7 @@
         "group": "C组",
         "home": {
           "name": "苏格兰",
-          "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+          "flag": "🏴",
           "code": "SCO"
         },
         "away": {
@@ -1208,7 +1212,7 @@
         },
         "away": {
           "name": "英格兰",
-          "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+          "flag": "🏴",
           "code": "ENG"
         },
         "status": "upcoming"

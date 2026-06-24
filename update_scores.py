@@ -176,7 +176,7 @@ STADIUMS = {
   "16": "\u582a\u8428\u65af\u57ce\u4f53\u80b2\u573a"
 }
 WEEKDAYS = ["\u661f\u671f\u4e00", "\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d", "\u661f\u671f\u65e5"]
-NOT_LIVE = ["", null, "finished", "notstarted"]
+NOT_LIVE = ("", None, "finished", "notstarted")
 
 def main():
     req = urllib.request.Request("https://worldcup26.ir/get/games", headers={"User-Agent": "Mozilla/5.0"})
@@ -230,8 +230,19 @@ def main():
         else:
             day["stage"] = "小组赛第3轮"
 
+    def safe_json_dump(obj, fp):
+        text = json.dumps(obj, ensure_ascii=False, indent=2)
+        cleaned = []
+        for c in text:
+            cp = ord(c)
+            if 0xD800 <= cp <= 0xDFFF:
+                cleaned.append('\u' + hex(cp)[2:].zfill(4))
+            else:
+                cleaned.append(c)
+        fp.write(''.join(cleaned))
+
     with open("matchData.json", 'w', encoding='utf-8') as f:
-        json.dump(match_data, f, ensure_ascii=False, indent=2)
+        safe_json_dump(match_data, f)
 
     total = sum(len(d["matches"]) for d in match_data.values())
     done = sum(1 for d in match_data.values() for m in d["matches"] if m["status"]=="done")
