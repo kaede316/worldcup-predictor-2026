@@ -1042,6 +1042,22 @@ const PREDICTIONS = {
 };
 
 async function loadMatchData() {
+  function findBestDate() {
+    const dates = Object.keys(matchData).sort();
+    const today = getTodayStr();
+    // Try to find most recent day with completed or live matches
+    for (let i = dates.length - 1; i >= 0; i--) {
+      const d = matchData[dates[i]];
+      if (d.matches.some(m => m.status === 'done' || m.status === 'live')) return dates[i];
+    }
+    // No completed matches at all, find closest past or today
+    let best = dates[0];
+    for (const d of dates) {
+      if (d <= today) best = d;
+    }
+    return best || dates[0];
+  }
+
   try {
     const resp = await fetch('matchData.json?' + Date.now());
     const data = await resp.json();
@@ -1054,9 +1070,15 @@ async function loadMatchData() {
       });
     }
     Object.assign(matchData, data);
+    const today = getTodayStr();
+    const todayData = matchData[today];
+    if (!todayData || !todayData.matches.some(m => m.status === 'done' || m.status === 'live')) {
+      currentDate = findBestDate();
+    }
   } catch(e) {
     console.warn('Failed to load matchData.json, using fallback');
     Object.assign(matchData, FALLBACK_DATA);
+    currentDate = findBestDate();
   }
   initRender();
 }
