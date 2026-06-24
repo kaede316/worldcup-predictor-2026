@@ -1,0 +1,17 @@
+name: Update Match Scores
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - run: python update_scores.py
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update matchData.json [skip ci]"
+          file_pattern: matchData.json
