@@ -1324,5 +1324,620 @@
     ],
     "date": "2026年6月28日 星期日",
     "stage": "小组赛第3轮"
+  },
+  "2026-06-29": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "堪萨斯城体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "南非",
+          "flag": "����",
+          "code": "RSA"
+        },
+        "away": {
+          "name": "加拿大",
+          "flag": "����",
+          "code": "CAN"
+        },
+        "status": "done",
+        "realScore": "0 - 1"
+      }
+    ],
+    "date": "2026年6月29日 星期一",
+    "stage": "1/16决赛"
+  },
+  "2026-06-30": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "圣克拉拉体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "巴西",
+          "flag": "����",
+          "code": "BRA"
+        },
+        "away": {
+          "name": "日本",
+          "flag": "����",
+          "code": "JPN"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "06:30",
+        "stadium": "休斯顿体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "德国",
+          "flag": "����",
+          "code": "GER"
+        },
+        "away": {
+          "name": "巴拉圭",
+          "flag": "����",
+          "code": "PAR"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "多伦多体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "荷兰",
+          "flag": "����",
+          "code": "NED"
+        },
+        "away": {
+          "name": "摩洛哥",
+          "flag": "����",
+          "code": "MAR"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年6月30日 星期二",
+    "stage": "1/16决赛"
+  },
+  "2026-07-01": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "洛杉矶SoFi体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "科特迪瓦",
+          "flag": "����",
+          "code": "CIV"
+        },
+        "away": {
+          "name": "挪威",
+          "flag": "����",
+          "code": "NOR"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "07:00",
+        "stadium": "费城体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "法国",
+          "flag": "����",
+          "code": "FRA"
+        },
+        "away": {
+          "name": "瑞典",
+          "flag": "����",
+          "code": "SWE"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "墨西哥城阿兹特克体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "墨西哥",
+          "flag": "����",
+          "code": "MEX"
+        },
+        "away": {
+          "name": "厄瓜多尔",
+          "flag": "����",
+          "code": "ECU"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月1日 星期三",
+    "stage": "1/16决赛"
+  },
+  "2026-07-02": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "福克斯堡体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "英格兰",
+          "flag": "��������������",
+          "code": "ENG"
+        },
+        "away": {
+          "name": "刚果(金)",
+          "flag": "����",
+          "code": "COD"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "03:00",
+        "stadium": "西雅图体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "比利时",
+          "flag": "����",
+          "code": "BEL"
+        },
+        "away": {
+          "name": "塞内加尔",
+          "flag": "����",
+          "code": "SEN"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "07:00",
+        "stadium": "迈阿密体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "美国",
+          "flag": "����",
+          "code": "USA"
+        },
+        "away": {
+          "name": "波黑",
+          "flag": "����",
+          "code": "BIH"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月2日 星期四",
+    "stage": "1/16决赛"
+  },
+  "2026-07-03": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "堪萨斯城体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "西班牙",
+          "flag": "����",
+          "code": "ESP"
+        },
+        "away": {
+          "name": "奥地利",
+          "flag": "����",
+          "code": "AUT"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "09:00",
+        "stadium": "蒙特雷体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "葡萄牙",
+          "flag": "����",
+          "code": "POR"
+        },
+        "away": {
+          "name": "克罗地亚",
+          "flag": "����",
+          "code": "CRO"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "10:00",
+        "stadium": "亚特兰大体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "瑞士",
+          "flag": "����",
+          "code": "SUI"
+        },
+        "away": {
+          "name": "阿尔及利亚",
+          "flag": "����",
+          "code": "ALG"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月3日 星期五",
+    "stage": "1/16决赛"
+  },
+  "2026-07-04": {
+    "matches": [
+      {
+        "time": "03:00",
+        "stadium": "洛杉矶SoFi体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "澳大利亚",
+          "flag": "����",
+          "code": "AUS"
+        },
+        "away": {
+          "name": "埃及",
+          "flag": "����",
+          "code": "EGY"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "08:00",
+        "stadium": "温哥华体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "阿根廷",
+          "flag": "����",
+          "code": "ARG"
+        },
+        "away": {
+          "name": "佛得角",
+          "flag": "����",
+          "code": "CPV"
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "10:30",
+        "stadium": "新泽西体育场",
+        "group": "1/16决赛",
+        "home": {
+          "name": "哥伦比亚",
+          "flag": "����",
+          "code": "COL"
+        },
+        "away": {
+          "name": "加纳",
+          "flag": "����",
+          "code": "GHA"
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月4日 星期六",
+    "stage": "1/16决赛"
+  },
+  "2026-07-05": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "圣克拉拉体育场",
+        "group": "1/8决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "07:00",
+        "stadium": "达拉斯体育场",
+        "group": "1/8决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月5日 星期日",
+    "stage": "1/16决赛"
+  },
+  "2026-07-06": {
+    "matches": [
+      {
+        "time": "06:00",
+        "stadium": "费城体育场",
+        "group": "1/8决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "08:00",
+        "stadium": "墨西哥城阿兹特克体育场",
+        "group": "1/8决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月6日 星期一",
+    "stage": "1/16决赛"
+  },
+  "2026-07-07": {
+    "matches": [
+      {
+        "time": "04:00",
+        "stadium": "洛杉矶SoFi体育场",
+        "group": "1/8决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "07:00",
+        "stadium": "西雅图体育场",
+        "group": "1/8决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月7日 星期二",
+    "stage": "1/8决赛"
+  },
+  "2026-07-08": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "福克斯堡体育场",
+        "group": "1/8决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "03:00",
+        "stadium": "亚特兰大体育场",
+        "group": "1/8决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月8日 星期三",
+    "stage": "1/8决赛"
+  },
+  "2026-07-10": {
+    "matches": [
+      {
+        "time": "06:00",
+        "stadium": "休斯顿体育场",
+        "group": "1/4决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月10日 星期五",
+    "stage": "1/8决赛"
+  },
+  "2026-07-11": {
+    "matches": [
+      {
+        "time": "02:00",
+        "stadium": "堪萨斯城体育场",
+        "group": "1/4决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月11日 星期六",
+    "stage": "1/8决赛"
+  },
+  "2026-07-12": {
+    "matches": [
+      {
+        "time": "07:00",
+        "stadium": "温哥华体育场",
+        "group": "1/4决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      },
+      {
+        "time": "10:00",
+        "stadium": "新泽西体育场",
+        "group": "1/4决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月12日 星期日",
+    "stage": "1/8决赛"
+  },
+  "2026-07-15": {
+    "matches": [
+      {
+        "time": "04:00",
+        "stadium": "洛杉矶SoFi体育场",
+        "group": "半决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月15日 星期三",
+    "stage": "1/4决赛"
+  },
+  "2026-07-16": {
+    "matches": [
+      {
+        "time": "05:00",
+        "stadium": "福克斯堡体育场",
+        "group": "半决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月16日 星期四",
+    "stage": "1/4决赛"
+  },
+  "2026-07-19": {
+    "matches": [
+      {
+        "time": "07:00",
+        "stadium": "温哥华体育场",
+        "group": "third",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月19日 星期日",
+    "stage": "决赛"
+  },
+  "2026-07-20": {
+    "matches": [
+      {
+        "time": "05:00",
+        "stadium": "费城体育场",
+        "group": "决赛",
+        "home": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "away": {
+          "name": "",
+          "flag": "",
+          "code": ""
+        },
+        "status": "upcoming"
+      }
+    ],
+    "date": "2026年7月20日 星期一",
+    "stage": "决赛"
   }
 }

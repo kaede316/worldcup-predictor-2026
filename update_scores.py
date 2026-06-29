@@ -178,12 +178,19 @@ STADIUMS = {
 WEEKDAYS = ["\u661f\u671f\u4e00", "\u661f\u671f\u4e8c", "\u661f\u671f\u4e09", "\u661f\u671f\u56db", "\u661f\u671f\u4e94", "\u661f\u671f\u516d", "\u661f\u671f\u65e5"]
 NOT_LIVE = ("", None, "finished", "notstarted")
 
+def _get_stage_label(g):
+    t = g.get("type","")
+    if t == "group":
+        return g.get("group","") + "组"
+    labels = {"r32":"1/16决赛","r16":"1/8决赛","qf":"1/4决赛","sf":"半决赛","final":"决赛"}
+    return labels.get(t, t)
+
 def main():
     req = urllib.request.Request("https://worldcup26.ir/get/games", headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=30) as resp:
         api_data = json.loads(resp.read().decode("utf-8"))
     
-    games = sorted([g for g in api_data["games"] if g.get("type") == "group"], key=lambda g: g["local_date"])
+    games = sorted(api_data["games"], key=lambda g: g["local_date"])
     match_data = OrderedDict()
 
     for g in games:
@@ -203,7 +210,7 @@ def main():
         match = {
             "time": bj_time,
             "stadium": STADIUMS.get(g.get("stadium_id",""), "未知球场"),
-            "group": g.get("group","") + "组",
+            "group": _get_stage_label(g),
             "home": {"name": home_cn, "flag": CN_FLAG.get(home_cn, ""), "code": CN_CODE.get(home_cn, "")},
             "away": {"name": away_cn, "flag": CN_FLAG.get(away_cn, ""), "code": CN_CODE.get(away_cn, "")},
             "status": status,
@@ -223,12 +230,23 @@ def main():
         day["matches"].sort(key=lambda m: m["time"])
         dt = datetime.strptime(d, "%Y-%m-%d")
         day["date"] = f"{dt.year}年{dt.month}月{dt.day}日 {WEEKDAYS[dt.weekday()]}"
+        # Determine stage based on date
         if d <= "2026-06-18":
             day["stage"] = "小组赛第1轮"
         elif d <= "2026-06-24":
             day["stage"] = "小组赛第2轮"
-        else:
+        elif d <= "2026-06-28":
             day["stage"] = "小组赛第3轮"
+        elif d <= "2026-07-06":
+            day["stage"] = "1/16决赛"
+        elif d <= "2026-07-12":
+            day["stage"] = "1/8决赛"
+        elif d <= "2026-07-16":
+            day["stage"] = "1/4决赛"
+        elif d <= "2026-07-18":
+            day["stage"] = "半决赛"
+        else:
+            day["stage"] = "决赛"
 
     def safe_json_dump(obj, fp):
         text = json.dumps(obj, ensure_ascii=False, indent=2)
