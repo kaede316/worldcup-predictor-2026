@@ -1038,6 +1038,103 @@ const PREDICTIONS = {
     "winner": "哥伦比亚胜",
     "type": "win",
     "confidence": "高"
+  },
+  // 1/16 决赛预测（淘汰赛用无组别键）
+  "南非|加拿大": {
+    "score": "1 - 2",
+    "winner": "加拿大胜",
+    "type": "win",
+    "confidence": "中"
+  },
+  "巴西|日本": {
+    "score": "3 - 1",
+    "winner": "巴西胜",
+    "type": "win",
+    "confidence": "很高"
+  },
+  "德国|巴拉圭": {
+    "score": "2 - 0",
+    "winner": "德国胜",
+    "type": "win",
+    "confidence": "高"
+  },
+  "荷兰|摩洛哥": {
+    "score": "2 - 1",
+    "winner": "荷兰胜",
+    "type": "win",
+    "confidence": "中"
+  },
+  "科特迪瓦|挪威": {
+    "score": "1 - 2",
+    "winner": "挪威胜",
+    "type": "win",
+    "confidence": "中"
+  },
+  "法国|瑞典": {
+    "score": "2 - 0",
+    "winner": "法国胜",
+    "type": "win",
+    "confidence": "很高"
+  },
+  "墨西哥|厄瓜多尔": {
+    "score": "2 - 1",
+    "winner": "墨西哥胜",
+    "type": "win",
+    "confidence": "中"
+  },
+  "英格兰|刚果(金)": {
+    "score": "3 - 0",
+    "winner": "英格兰胜",
+    "type": "win",
+    "confidence": "很高"
+  },
+  "比利时|塞内加尔": {
+    "score": "2 - 1",
+    "winner": "比利时胜",
+    "type": "win",
+    "confidence": "中"
+  },
+  "美国|波黑": {
+    "score": "2 - 0",
+    "winner": "美国胜",
+    "type": "win",
+    "confidence": "高"
+  },
+  "西班牙|奥地利": {
+    "score": "2 - 0",
+    "winner": "西班牙胜",
+    "type": "win",
+    "confidence": "很高"
+  },
+  "葡萄牙|克罗地亚": {
+    "score": "2 - 1",
+    "winner": "葡萄牙胜",
+    "type": "win",
+    "confidence": "高"
+  },
+  "瑞士|阿尔及利亚": {
+    "score": "1 - 1",
+    "winner": "平局",
+    "type": "draw",
+    "confidence": "中"
+  },
+  "澳大利亚|埃及": {
+    "score": "1 - 2",
+    "winner": "埃及胜",
+    "type": "win",
+    "confidence": "中"
+  },
+  "阿根廷|佛得角": {
+    "score": "3 - 0",
+    "winner": "阿根廷胜",
+    "type": "win",
+    "confidence": "很高"
+  },
+  "哥伦比亚|加纳": {
+    "score": "2 - 0",
+    "winner": "哥伦比亚胜",
+    "type": "win",
+    "confidence": "高"
   }
 };
 
@@ -1064,8 +1161,11 @@ async function loadMatchData() {
     for (const dateKey in data) {
       data[dateKey].matches.forEach(m => {
         const key = m.home.name + '|' + m.away.name + '|' + m.group;
+        const keyNoGroup = m.home.name + '|' + m.away.name;
         if (PREDICTIONS[key]) {
           m.prediction = PREDICTIONS[key];
+        } else if (PREDICTIONS[keyNoGroup]) {
+          m.prediction = PREDICTIONS[keyNoGroup];
         }
       });
     }
