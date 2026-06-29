@@ -7,12 +7,12 @@
         "group": "A组",
         "home": {
           "name": "墨西哥",
-          "flag": "����",
+          "flag": "🇲🇽",
           "code": "MEX"
         },
         "away": {
           "name": "南非",
-          "flag": "����",
+          "flag": "🇿🇦",
           "code": "RSA"
         },
         "status": "done",
@@ -24,12 +24,12 @@
         "group": "A组",
         "home": {
           "name": "韩国",
-          "flag": "����",
+          "flag": "🇰🇷",
           "code": "KOR"
         },
         "away": {
           "name": "捷克",
-          "flag": "����",
+          "flag": "🇨🇿",
           "code": "CZE"
         },
         "status": "done",
@@ -47,12 +47,12 @@
         "group": "B组",
         "home": {
           "name": "加拿大",
-          "flag": "����",
+          "flag": "🇨🇦",
           "code": "CAN"
         },
         "away": {
           "name": "波黑",
-          "flag": "����",
+          "flag": "🇧🇦",
           "code": "BIH"
         },
         "status": "done",
@@ -64,12 +64,12 @@
         "group": "D组",
         "home": {
           "name": "美国",
-          "flag": "����",
+          "flag": "🇺🇸",
           "code": "USA"
         },
         "away": {
           "name": "巴拉圭",
-          "flag": "����",
+          "flag": "🇵🇾",
           "code": "PAR"
         },
         "status": "done",
@@ -87,12 +87,12 @@
         "group": "B组",
         "home": {
           "name": "卡塔尔",
-          "flag": "����",
+          "flag": "🇶🇦",
           "code": "QAT"
         },
         "away": {
           "name": "瑞士",
-          "flag": "����",
+          "flag": "🇨🇭",
           "code": "SUI"
         },
         "status": "done",
@@ -104,12 +104,12 @@
         "group": "C组",
         "home": {
           "name": "巴西",
-          "flag": "����",
+          "flag": "🇧🇷",
           "code": "BRA"
         },
         "away": {
           "name": "摩洛哥",
-          "flag": "����",
+          "flag": "🇲🇦",
           "code": "MAR"
         },
         "status": "done",
@@ -121,12 +121,12 @@
         "group": "D组",
         "home": {
           "name": "澳大利亚",
-          "flag": "����",
+          "flag": "🇦🇺",
           "code": "AUS"
         },
         "away": {
           "name": "土耳其",
-          "flag": "����",
+          "flag": "🇹🇷",
           "code": "TUR"
         },
         "status": "done",
@@ -138,12 +138,12 @@
         "group": "C组",
         "home": {
           "name": "海地",
-          "flag": "����",
+          "flag": "🇭🇹",
           "code": "HAI"
         },
         "away": {
           "name": "苏格兰",
-          "flag": "��������������",
+          "flag": "🏴",
           "code": "SCO"
         },
         "status": "done",
@@ -161,12 +161,12 @@
         "group": "E组",
         "home": {
           "name": "德国",
-          "flag": "����",
+          "flag": "🇩🇪",
           "code": "GER"
         },
         "away": {
           "name": "库拉索",
-          "flag": "����",
+          "flag": "🇨🇼",
           "code": "CUW"
         },
         "status": "done",
@@ -178,12 +178,12 @@
         "group": "F组",
         "home": {
           "name": "荷兰",
-          "flag": "����",
+          "flag": "🇳🇱",
           "code": "NED"
         },
         "away": {
           "name": "日本",
-          "flag": "����",
+          "flag": "🇯🇵",
           "code": "JPN"
         },
         "status": "done",
@@ -195,12 +195,12 @@
         "group": "E组",
         "home": {
           "name": "科特迪瓦",
-          "flag": "����",
+          "flag": "🇨🇮",
           "code": "CIV"
         },
         "away": {
           "name": "厄瓜多尔",
-          "flag": "����",
+          "flag": "🇪🇨",
           "code": "ECU"
         },
         "status": "done",
@@ -212,12 +212,12 @@
         "group": "F组",
         "home": {
           "name": "瑞典",
-          "flag": "����",
+          "flag": "🇸🇪",
           "code": "SWE"
         },
         "away": {
           "name": "突尼斯",
-          "flag": "����",
+          "flag": "🇹🇳",
           "code": "TUN"
         },
         "status": "done",
@@ -235,12 +235,12 @@
         "group": "H组",
         "home": {
           "name": "西班牙",
-          "flag": "����",
+          "flag": "🇪🇸",
           "code": "ESP"
         },
         "away": {
           "name": "佛得角",
-          "flag": "����",
+          "flag": "🇨🇻",
           "code": "CPV"
         },
         "status": "done",
@@ -252,12 +252,12 @@
         "group": "G组",
         "home": {
           "name": "比利时",
-          "flag": "����",
+          "flag": "🇧🇪",
           "code": "BEL"
         },
         "away": {
           "name": "埃及",
-          "flag": "����",
+          "flag": "🇪🇬",
           "code": "EGY"
         },
         "status": "done",
@@ -269,12 +269,12 @@
         "group": "H组",
         "home": {
           "name": "沙特阿拉伯",
-          "flag": "����",
+          "flag": "🇸🇦",
           "code": "KSA"
         },
         "away": {
           "name": "乌拉圭",
-          "flag": "����",
+          "flag": "🇺🇾",
           "code": "URU"
         },
         "status": "done",
@@ -286,12 +286,12 @@
         "group": "G组",
         "home": {
           "name": "伊朗",
-          "flag": "����",
+          "flag": "🇮🇷",
           "code": "IRN"
         },
         "away": {
           "name": "新西兰",
-          "flag": "����",
+          "flag": "🇳🇿",
           "code": "NZL"
         },
         "status": "done",
@@ -309,12 +309,12 @@
         "group": "I组",
         "home": {
           "name": "法国",
-          "flag": "����",
+          "flag": "🇫🇷",
           "code": "FRA"
         },
         "away": {
           "name": "塞内加尔",
-          "flag": "����",
+          "flag": "🇸🇳",
           "code": "SEN"
         },
         "status": "done",
@@ -326,12 +326,12 @@
         "group": "I组",
         "home": {
           "name": "伊拉克",
-          "flag": "����",
+          "flag": "🇮🇶",
           "code": "IRQ"
         },
         "away": {
           "name": "挪威",
-          "flag": "����",
+          "flag": "🇳🇴",
           "code": "NOR"
         },
         "status": "done",
@@ -343,12 +343,12 @@
         "group": "J组",
         "home": {
           "name": "阿根廷",
-          "flag": "����",
+          "flag": "🇦🇷",
           "code": "ARG"
         },
         "away": {
           "name": "阿尔及利亚",
-          "flag": "����",
+          "flag": "🇩🇿",
           "code": "ALG"
         },
         "status": "done",
@@ -360,12 +360,12 @@
         "group": "J组",
         "home": {
           "name": "奥地利",
-          "flag": "����",
+          "flag": "🇦🇹",
           "code": "AUT"
         },
         "away": {
           "name": "约旦",
-          "flag": "����",
+          "flag": "🇯🇴",
           "code": "JOR"
         },
         "status": "done",
@@ -383,12 +383,12 @@
         "group": "K组",
         "home": {
           "name": "葡萄牙",
-          "flag": "����",
+          "flag": "🇵🇹",
           "code": "POR"
         },
         "away": {
           "name": "刚果(金)",
-          "flag": "����",
+          "flag": "🇨🇩",
           "code": "COD"
         },
         "status": "done",
@@ -400,12 +400,12 @@
         "group": "L组",
         "home": {
           "name": "英格兰",
-          "flag": "��������������",
+          "flag": "🏴",
           "code": "ENG"
         },
         "away": {
           "name": "克罗地亚",
-          "flag": "����",
+          "flag": "🇭🇷",
           "code": "CRO"
         },
         "status": "done",
@@ -417,12 +417,12 @@
         "group": "L组",
         "home": {
           "name": "加纳",
-          "flag": "����",
+          "flag": "🇬🇭",
           "code": "GHA"
         },
         "away": {
           "name": "巴拿马",
-          "flag": "����",
+          "flag": "🇵🇦",
           "code": "PAN"
         },
         "status": "done",
@@ -434,12 +434,12 @@
         "group": "K组",
         "home": {
           "name": "乌兹别克斯坦",
-          "flag": "����",
+          "flag": "🇺🇿",
           "code": "UZB"
         },
         "away": {
           "name": "哥伦比亚",
-          "flag": "����",
+          "flag": "🇨🇴",
           "code": "COL"
         },
         "status": "done",
@@ -457,12 +457,12 @@
         "group": "B组",
         "home": {
           "name": "瑞士",
-          "flag": "����",
+          "flag": "🇨🇭",
           "code": "SUI"
         },
         "away": {
           "name": "波黑",
-          "flag": "����",
+          "flag": "🇧🇦",
           "code": "BIH"
         },
         "status": "done",
@@ -474,12 +474,12 @@
         "group": "A组",
         "home": {
           "name": "捷克",
-          "flag": "����",
+          "flag": "🇨🇿",
           "code": "CZE"
         },
         "away": {
           "name": "南非",
-          "flag": "����",
+          "flag": "🇿🇦",
           "code": "RSA"
         },
         "status": "done",
@@ -491,12 +491,12 @@
         "group": "B组",
         "home": {
           "name": "加拿大",
-          "flag": "����",
+          "flag": "🇨🇦",
           "code": "CAN"
         },
         "away": {
           "name": "卡塔尔",
-          "flag": "����",
+          "flag": "🇶🇦",
           "code": "QAT"
         },
         "status": "done",
@@ -508,12 +508,12 @@
         "group": "A组",
         "home": {
           "name": "墨西哥",
-          "flag": "����",
+          "flag": "🇲🇽",
           "code": "MEX"
         },
         "away": {
           "name": "韩国",
-          "flag": "����",
+          "flag": "🇰🇷",
           "code": "KOR"
         },
         "status": "done",
@@ -531,12 +531,12 @@
         "group": "D组",
         "home": {
           "name": "美国",
-          "flag": "����",
+          "flag": "🇺🇸",
           "code": "USA"
         },
         "away": {
           "name": "澳大利亚",
-          "flag": "����",
+          "flag": "🇦🇺",
           "code": "AUS"
         },
         "status": "done",
@@ -548,12 +548,12 @@
         "group": "C组",
         "home": {
           "name": "苏格兰",
-          "flag": "��������������",
+          "flag": "🏴",
           "code": "SCO"
         },
         "away": {
           "name": "摩洛哥",
-          "flag": "����",
+          "flag": "🇲🇦",
           "code": "MAR"
         },
         "status": "done",
@@ -565,12 +565,12 @@
         "group": "D组",
         "home": {
           "name": "土耳其",
-          "flag": "����",
+          "flag": "🇹🇷",
           "code": "TUR"
         },
         "away": {
           "name": "巴拉圭",
-          "flag": "����",
+          "flag": "🇵🇾",
           "code": "PAR"
         },
         "status": "done",
@@ -582,12 +582,12 @@
         "group": "C组",
         "home": {
           "name": "巴西",
-          "flag": "����",
+          "flag": "🇧🇷",
           "code": "BRA"
         },
         "away": {
           "name": "海地",
-          "flag": "����",
+          "flag": "🇭🇹",
           "code": "HAI"
         },
         "status": "done",
@@ -605,12 +605,12 @@
         "group": "F组",
         "home": {
           "name": "荷兰",
-          "flag": "����",
+          "flag": "🇳🇱",
           "code": "NED"
         },
         "away": {
           "name": "瑞典",
-          "flag": "����",
+          "flag": "🇸🇪",
           "code": "SWE"
         },
         "status": "done",
@@ -622,12 +622,12 @@
         "group": "E组",
         "home": {
           "name": "德国",
-          "flag": "����",
+          "flag": "🇩🇪",
           "code": "GER"
         },
         "away": {
           "name": "科特迪瓦",
-          "flag": "����",
+          "flag": "🇨🇮",
           "code": "CIV"
         },
         "status": "done",
@@ -639,12 +639,12 @@
         "group": "E组",
         "home": {
           "name": "厄瓜多尔",
-          "flag": "����",
+          "flag": "🇪🇨",
           "code": "ECU"
         },
         "away": {
           "name": "库拉索",
-          "flag": "����",
+          "flag": "🇨🇼",
           "code": "CUW"
         },
         "status": "done",
@@ -656,12 +656,12 @@
         "group": "F组",
         "home": {
           "name": "突尼斯",
-          "flag": "����",
+          "flag": "🇹🇳",
           "code": "TUN"
         },
         "away": {
           "name": "日本",
-          "flag": "����",
+          "flag": "🇯🇵",
           "code": "JPN"
         },
         "status": "done",
@@ -679,12 +679,12 @@
         "group": "H组",
         "home": {
           "name": "西班牙",
-          "flag": "����",
+          "flag": "🇪🇸",
           "code": "ESP"
         },
         "away": {
           "name": "沙特阿拉伯",
-          "flag": "����",
+          "flag": "🇸🇦",
           "code": "KSA"
         },
         "status": "done",
@@ -696,12 +696,12 @@
         "group": "G组",
         "home": {
           "name": "比利时",
-          "flag": "����",
+          "flag": "🇧🇪",
           "code": "BEL"
         },
         "away": {
           "name": "伊朗",
-          "flag": "����",
+          "flag": "🇮🇷",
           "code": "IRN"
         },
         "status": "done",
@@ -713,12 +713,12 @@
         "group": "G组",
         "home": {
           "name": "新西兰",
-          "flag": "����",
+          "flag": "🇳🇿",
           "code": "NZL"
         },
         "away": {
           "name": "埃及",
-          "flag": "����",
+          "flag": "🇪🇬",
           "code": "EGY"
         },
         "status": "done",
@@ -730,12 +730,12 @@
         "group": "H组",
         "home": {
           "name": "乌拉圭",
-          "flag": "����",
+          "flag": "🇺🇾",
           "code": "URU"
         },
         "away": {
           "name": "佛得角",
-          "flag": "����",
+          "flag": "🇨🇻",
           "code": "CPV"
         },
         "status": "done",
@@ -753,12 +753,12 @@
         "group": "J组",
         "home": {
           "name": "阿根廷",
-          "flag": "����",
+          "flag": "🇦🇷",
           "code": "ARG"
         },
         "away": {
           "name": "奥地利",
-          "flag": "����",
+          "flag": "🇦🇹",
           "code": "AUT"
         },
         "status": "done",
@@ -770,12 +770,12 @@
         "group": "I组",
         "home": {
           "name": "法国",
-          "flag": "����",
+          "flag": "🇫🇷",
           "code": "FRA"
         },
         "away": {
           "name": "伊拉克",
-          "flag": "����",
+          "flag": "🇮🇶",
           "code": "IRQ"
         },
         "status": "done",
@@ -787,12 +787,12 @@
         "group": "I组",
         "home": {
           "name": "挪威",
-          "flag": "����",
+          "flag": "🇳🇴",
           "code": "NOR"
         },
         "away": {
           "name": "塞内加尔",
-          "flag": "����",
+          "flag": "🇸🇳",
           "code": "SEN"
         },
         "status": "done",
@@ -804,12 +804,12 @@
         "group": "J组",
         "home": {
           "name": "约旦",
-          "flag": "����",
+          "flag": "🇯🇴",
           "code": "JOR"
         },
         "away": {
           "name": "阿尔及利亚",
-          "flag": "����",
+          "flag": "🇩🇿",
           "code": "ALG"
         },
         "status": "done",
@@ -827,12 +827,12 @@
         "group": "K组",
         "home": {
           "name": "葡萄牙",
-          "flag": "����",
+          "flag": "🇵🇹",
           "code": "POR"
         },
         "away": {
           "name": "乌兹别克斯坦",
-          "flag": "����",
+          "flag": "🇺🇿",
           "code": "UZB"
         },
         "status": "done",
@@ -844,12 +844,12 @@
         "group": "L组",
         "home": {
           "name": "英格兰",
-          "flag": "��������������",
+          "flag": "🏴",
           "code": "ENG"
         },
         "away": {
           "name": "加纳",
-          "flag": "����",
+          "flag": "🇬🇭",
           "code": "GHA"
         },
         "status": "done",
@@ -861,12 +861,12 @@
         "group": "L组",
         "home": {
           "name": "巴拿马",
-          "flag": "����",
+          "flag": "🇵🇦",
           "code": "PAN"
         },
         "away": {
           "name": "克罗地亚",
-          "flag": "����",
+          "flag": "🇭🇷",
           "code": "CRO"
         },
         "status": "done",
@@ -878,12 +878,12 @@
         "group": "K组",
         "home": {
           "name": "哥伦比亚",
-          "flag": "����",
+          "flag": "🇨🇴",
           "code": "COL"
         },
         "away": {
           "name": "刚果(金)",
-          "flag": "����",
+          "flag": "🇨🇩",
           "code": "COD"
         },
         "status": "done",
@@ -901,12 +901,12 @@
         "group": "B组",
         "home": {
           "name": "波黑",
-          "flag": "����",
+          "flag": "🇧🇦",
           "code": "BIH"
         },
         "away": {
           "name": "卡塔尔",
-          "flag": "����",
+          "flag": "🇶🇦",
           "code": "QAT"
         },
         "status": "done",
@@ -918,12 +918,12 @@
         "group": "B组",
         "home": {
           "name": "瑞士",
-          "flag": "����",
+          "flag": "🇨🇭",
           "code": "SUI"
         },
         "away": {
           "name": "加拿大",
-          "flag": "����",
+          "flag": "🇨🇦",
           "code": "CAN"
         },
         "status": "done",
@@ -935,12 +935,12 @@
         "group": "C组",
         "home": {
           "name": "摩洛哥",
-          "flag": "����",
+          "flag": "🇲🇦",
           "code": "MAR"
         },
         "away": {
           "name": "海地",
-          "flag": "����",
+          "flag": "🇭🇹",
           "code": "HAI"
         },
         "status": "done",
@@ -952,12 +952,12 @@
         "group": "C组",
         "home": {
           "name": "苏格兰",
-          "flag": "��������������",
+          "flag": "🏴",
           "code": "SCO"
         },
         "away": {
           "name": "巴西",
-          "flag": "����",
+          "flag": "🇧🇷",
           "code": "BRA"
         },
         "status": "done",
@@ -969,12 +969,12 @@
         "group": "A组",
         "home": {
           "name": "捷克",
-          "flag": "����",
+          "flag": "🇨🇿",
           "code": "CZE"
         },
         "away": {
           "name": "墨西哥",
-          "flag": "����",
+          "flag": "🇲🇽",
           "code": "MEX"
         },
         "status": "done",
@@ -986,12 +986,12 @@
         "group": "A组",
         "home": {
           "name": "南非",
-          "flag": "����",
+          "flag": "🇿🇦",
           "code": "RSA"
         },
         "away": {
           "name": "韩国",
-          "flag": "����",
+          "flag": "🇰🇷",
           "code": "KOR"
         },
         "status": "done",
@@ -1009,12 +1009,12 @@
         "group": "E组",
         "home": {
           "name": "库拉索",
-          "flag": "����",
+          "flag": "🇨🇼",
           "code": "CUW"
         },
         "away": {
           "name": "科特迪瓦",
-          "flag": "����",
+          "flag": "🇨🇮",
           "code": "CIV"
         },
         "status": "done",
@@ -1026,12 +1026,12 @@
         "group": "E组",
         "home": {
           "name": "厄瓜多尔",
-          "flag": "����",
+          "flag": "🇪🇨",
           "code": "ECU"
         },
         "away": {
           "name": "德国",
-          "flag": "����",
+          "flag": "🇩🇪",
           "code": "GER"
         },
         "status": "done",
@@ -1043,12 +1043,12 @@
         "group": "F组",
         "home": {
           "name": "日本",
-          "flag": "����",
+          "flag": "🇯🇵",
           "code": "JPN"
         },
         "away": {
           "name": "瑞典",
-          "flag": "����",
+          "flag": "🇸🇪",
           "code": "SWE"
         },
         "status": "done",
@@ -1060,12 +1060,12 @@
         "group": "F组",
         "home": {
           "name": "突尼斯",
-          "flag": "����",
+          "flag": "🇹🇳",
           "code": "TUN"
         },
         "away": {
           "name": "荷兰",
-          "flag": "����",
+          "flag": "🇳🇱",
           "code": "NED"
         },
         "status": "done",
@@ -1077,12 +1077,12 @@
         "group": "D组",
         "home": {
           "name": "土耳其",
-          "flag": "����",
+          "flag": "🇹🇷",
           "code": "TUR"
         },
         "away": {
           "name": "美国",
-          "flag": "����",
+          "flag": "🇺🇸",
           "code": "USA"
         },
         "status": "done",
@@ -1094,12 +1094,12 @@
         "group": "D组",
         "home": {
           "name": "巴拉圭",
-          "flag": "����",
+          "flag": "🇵🇾",
           "code": "PAR"
         },
         "away": {
           "name": "澳大利亚",
-          "flag": "����",
+          "flag": "🇦🇺",
           "code": "AUS"
         },
         "status": "done",
@@ -1117,12 +1117,12 @@
         "group": "I组",
         "home": {
           "name": "塞内加尔",
-          "flag": "����",
+          "flag": "🇸🇳",
           "code": "SEN"
         },
         "away": {
           "name": "伊拉克",
-          "flag": "����",
+          "flag": "🇮🇶",
           "code": "IRQ"
         },
         "status": "done",
@@ -1134,12 +1134,12 @@
         "group": "I组",
         "home": {
           "name": "挪威",
-          "flag": "����",
+          "flag": "🇳🇴",
           "code": "NOR"
         },
         "away": {
           "name": "法国",
-          "flag": "����",
+          "flag": "🇫🇷",
           "code": "FRA"
         },
         "status": "done",
@@ -1151,12 +1151,12 @@
         "group": "H组",
         "home": {
           "name": "乌拉圭",
-          "flag": "����",
+          "flag": "🇺🇾",
           "code": "URU"
         },
         "away": {
           "name": "西班牙",
-          "flag": "����",
+          "flag": "🇪🇸",
           "code": "ESP"
         },
         "status": "done",
@@ -1168,12 +1168,12 @@
         "group": "H组",
         "home": {
           "name": "佛得角",
-          "flag": "����",
+          "flag": "🇨🇻",
           "code": "CPV"
         },
         "away": {
           "name": "沙特阿拉伯",
-          "flag": "����",
+          "flag": "🇸🇦",
           "code": "KSA"
         },
         "status": "done",
@@ -1185,12 +1185,12 @@
         "group": "G组",
         "home": {
           "name": "埃及",
-          "flag": "����",
+          "flag": "🇪🇬",
           "code": "EGY"
         },
         "away": {
           "name": "伊朗",
-          "flag": "����",
+          "flag": "🇮🇷",
           "code": "IRN"
         },
         "status": "done",
@@ -1202,12 +1202,12 @@
         "group": "G组",
         "home": {
           "name": "新西兰",
-          "flag": "����",
+          "flag": "🇳🇿",
           "code": "NZL"
         },
         "away": {
           "name": "比利时",
-          "flag": "����",
+          "flag": "🇧🇪",
           "code": "BEL"
         },
         "status": "done",
@@ -1225,12 +1225,12 @@
         "group": "L组",
         "home": {
           "name": "巴拿马",
-          "flag": "����",
+          "flag": "🇵🇦",
           "code": "PAN"
         },
         "away": {
           "name": "英格兰",
-          "flag": "��������������",
+          "flag": "🏴",
           "code": "ENG"
         },
         "status": "done",
@@ -1242,12 +1242,12 @@
         "group": "L组",
         "home": {
           "name": "克罗地亚",
-          "flag": "����",
+          "flag": "🇭🇷",
           "code": "CRO"
         },
         "away": {
           "name": "加纳",
-          "flag": "����",
+          "flag": "🇬🇭",
           "code": "GHA"
         },
         "status": "done",
@@ -1259,12 +1259,12 @@
         "group": "K组",
         "home": {
           "name": "刚果(金)",
-          "flag": "����",
+          "flag": "🇨🇩",
           "code": "COD"
         },
         "away": {
           "name": "乌兹别克斯坦",
-          "flag": "����",
+          "flag": "🇺🇿",
           "code": "UZB"
         },
         "status": "done",
@@ -1276,12 +1276,12 @@
         "group": "K组",
         "home": {
           "name": "哥伦比亚",
-          "flag": "����",
+          "flag": "🇨🇴",
           "code": "COL"
         },
         "away": {
           "name": "葡萄牙",
-          "flag": "����",
+          "flag": "🇵🇹",
           "code": "POR"
         },
         "status": "done",
@@ -1293,12 +1293,12 @@
         "group": "J组",
         "home": {
           "name": "约旦",
-          "flag": "����",
+          "flag": "🇯🇴",
           "code": "JOR"
         },
         "away": {
           "name": "阿根廷",
-          "flag": "����",
+          "flag": "🇦🇷",
           "code": "ARG"
         },
         "status": "done",
@@ -1310,12 +1310,12 @@
         "group": "J组",
         "home": {
           "name": "阿尔及利亚",
-          "flag": "����",
+          "flag": "🇩🇿",
           "code": "ALG"
         },
         "away": {
           "name": "奥地利",
-          "flag": "����",
+          "flag": "🇦🇹",
           "code": "AUT"
         },
         "status": "done",
@@ -1333,12 +1333,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "南非",
-          "flag": "����",
+          "flag": "🇿🇦",
           "code": "RSA"
         },
         "away": {
           "name": "加拿大",
-          "flag": "����",
+          "flag": "🇨🇦",
           "code": "CAN"
         },
         "status": "done",
@@ -1356,12 +1356,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "巴西",
-          "flag": "����",
+          "flag": "🇧🇷",
           "code": "BRA"
         },
         "away": {
           "name": "日本",
-          "flag": "����",
+          "flag": "🇯🇵",
           "code": "JPN"
         },
         "status": "upcoming"
@@ -1372,12 +1372,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "德国",
-          "flag": "����",
+          "flag": "🇩🇪",
           "code": "GER"
         },
         "away": {
           "name": "巴拉圭",
-          "flag": "����",
+          "flag": "🇵🇾",
           "code": "PAR"
         },
         "status": "upcoming"
@@ -1388,12 +1388,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "荷兰",
-          "flag": "����",
+          "flag": "🇳🇱",
           "code": "NED"
         },
         "away": {
           "name": "摩洛哥",
-          "flag": "����",
+          "flag": "🇲🇦",
           "code": "MAR"
         },
         "status": "upcoming"
@@ -1410,12 +1410,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "科特迪瓦",
-          "flag": "����",
+          "flag": "🇨🇮",
           "code": "CIV"
         },
         "away": {
           "name": "挪威",
-          "flag": "����",
+          "flag": "🇳🇴",
           "code": "NOR"
         },
         "status": "upcoming"
@@ -1426,12 +1426,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "法国",
-          "flag": "����",
+          "flag": "🇫🇷",
           "code": "FRA"
         },
         "away": {
           "name": "瑞典",
-          "flag": "����",
+          "flag": "🇸🇪",
           "code": "SWE"
         },
         "status": "upcoming"
@@ -1442,12 +1442,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "墨西哥",
-          "flag": "����",
+          "flag": "🇲🇽",
           "code": "MEX"
         },
         "away": {
           "name": "厄瓜多尔",
-          "flag": "����",
+          "flag": "🇪🇨",
           "code": "ECU"
         },
         "status": "upcoming"
@@ -1464,12 +1464,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "英格兰",
-          "flag": "��������������",
+          "flag": "🏴",
           "code": "ENG"
         },
         "away": {
           "name": "刚果(金)",
-          "flag": "����",
+          "flag": "🇨🇩",
           "code": "COD"
         },
         "status": "upcoming"
@@ -1480,12 +1480,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "比利时",
-          "flag": "����",
+          "flag": "🇧🇪",
           "code": "BEL"
         },
         "away": {
           "name": "塞内加尔",
-          "flag": "����",
+          "flag": "🇸🇳",
           "code": "SEN"
         },
         "status": "upcoming"
@@ -1496,12 +1496,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "美国",
-          "flag": "����",
+          "flag": "🇺🇸",
           "code": "USA"
         },
         "away": {
           "name": "波黑",
-          "flag": "����",
+          "flag": "🇧🇦",
           "code": "BIH"
         },
         "status": "upcoming"
@@ -1518,12 +1518,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "西班牙",
-          "flag": "����",
+          "flag": "🇪🇸",
           "code": "ESP"
         },
         "away": {
           "name": "奥地利",
-          "flag": "����",
+          "flag": "🇦🇹",
           "code": "AUT"
         },
         "status": "upcoming"
@@ -1534,12 +1534,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "葡萄牙",
-          "flag": "����",
+          "flag": "🇵🇹",
           "code": "POR"
         },
         "away": {
           "name": "克罗地亚",
-          "flag": "����",
+          "flag": "🇭🇷",
           "code": "CRO"
         },
         "status": "upcoming"
@@ -1550,12 +1550,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "瑞士",
-          "flag": "����",
+          "flag": "🇨🇭",
           "code": "SUI"
         },
         "away": {
           "name": "阿尔及利亚",
-          "flag": "����",
+          "flag": "🇩🇿",
           "code": "ALG"
         },
         "status": "upcoming"
@@ -1572,12 +1572,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "澳大利亚",
-          "flag": "����",
+          "flag": "🇦🇺",
           "code": "AUS"
         },
         "away": {
           "name": "埃及",
-          "flag": "����",
+          "flag": "🇪🇬",
           "code": "EGY"
         },
         "status": "upcoming"
@@ -1588,12 +1588,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "阿根廷",
-          "flag": "����",
+          "flag": "🇦🇷",
           "code": "ARG"
         },
         "away": {
           "name": "佛得角",
-          "flag": "����",
+          "flag": "🇨🇻",
           "code": "CPV"
         },
         "status": "upcoming"
@@ -1604,12 +1604,12 @@
         "group": "1/16决赛",
         "home": {
           "name": "哥伦比亚",
-          "flag": "����",
+          "flag": "🇨🇴",
           "code": "COL"
         },
         "away": {
           "name": "加纳",
-          "flag": "����",
+          "flag": "🇬🇭",
           "code": "GHA"
         },
         "status": "upcoming"
@@ -1625,12 +1625,12 @@
         "stadium": "圣克拉拉体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1641,12 +1641,12 @@
         "stadium": "达拉斯体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1663,12 +1663,12 @@
         "stadium": "费城体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1679,12 +1679,12 @@
         "stadium": "墨西哥城阿兹特克体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1701,12 +1701,12 @@
         "stadium": "洛杉矶SoFi体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1717,12 +1717,12 @@
         "stadium": "西雅图体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1739,12 +1739,12 @@
         "stadium": "福克斯堡体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1755,12 +1755,12 @@
         "stadium": "亚特兰大体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1777,12 +1777,12 @@
         "stadium": "休斯顿体育场",
         "group": "1/4决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1799,12 +1799,12 @@
         "stadium": "堪萨斯城体育场",
         "group": "1/4决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1821,12 +1821,12 @@
         "stadium": "温哥华体育场",
         "group": "1/4决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1837,12 +1837,12 @@
         "stadium": "新泽西体育场",
         "group": "1/4决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1859,12 +1859,12 @@
         "stadium": "洛杉矶SoFi体育场",
         "group": "半决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1881,12 +1881,12 @@
         "stadium": "福克斯堡体育场",
         "group": "半决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1903,12 +1903,12 @@
         "stadium": "温哥华体育场",
         "group": "third",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
@@ -1925,12 +1925,12 @@
         "stadium": "费城体育场",
         "group": "决赛",
         "home": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
         "away": {
-          "name": "",
+          "name": "TBD",
           "flag": "",
           "code": ""
         },
