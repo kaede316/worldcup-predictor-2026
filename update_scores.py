@@ -236,7 +236,7 @@ def main():
         for c in text:
             cp = ord(c)
             if 0xD800 <= cp <= 0xDFFF:
-                cleaned.append('\u' + hex(cp)[2:].zfill(4))
+                cleaned.append(chr(0xFFFD))
             else:
                 cleaned.append(c)
         fp.write(''.join(cleaned))
