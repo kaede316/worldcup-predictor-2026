@@ -1364,7 +1364,8 @@
           "flag": "🇯🇵",
           "code": "JPN"
         },
-        "status": "upcoming"
+        "status": "done",
+        "realScore": "2 - 1"
       },
       {
         "time": "06:30",
@@ -1380,7 +1381,8 @@
           "flag": "🇵🇾",
           "code": "PAR"
         },
-        "status": "upcoming"
+        "status": "done",
+        "realScore": "1 - 1"
       },
       {
         "time": "09:00",
@@ -1396,7 +1398,8 @@
           "flag": "🇲🇦",
           "code": "MAR"
         },
-        "status": "upcoming"
+        "status": "done",
+        "realScore": "1 - 1"
       }
     ],
     "date": "2026年6月30日 星期二",
@@ -1625,14 +1628,14 @@
         "stadium": "圣克拉拉体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "TBD",
-          "flag": "",
-          "code": ""
+          "name": "加拿大",
+          "flag": "🇨🇦",
+          "code": "CAN"
         },
         "away": {
-          "name": "TBD",
-          "flag": "",
-          "code": ""
+          "name": "摩洛哥",
+          "flag": "🇲🇦",
+          "code": "MAR"
         },
         "status": "upcoming"
       },
@@ -1641,9 +1644,9 @@
         "stadium": "达拉斯体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "TBD",
-          "flag": "",
-          "code": ""
+          "name": "巴拉圭",
+          "flag": "🇵🇾",
+          "code": "PAR"
         },
         "away": {
           "name": "TBD",
@@ -1663,9 +1666,9 @@
         "stadium": "费城体育场",
         "group": "1/8决赛",
         "home": {
-          "name": "TBD",
-          "flag": "",
-          "code": ""
+          "name": "巴西",
+          "flag": "🇧🇷",
+          "code": "BRA"
         },
         "away": {
           "name": "TBD",
